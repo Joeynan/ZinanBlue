@@ -1,0 +1,50 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.filterButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--theme-bg-primary);
+  color: var(--theme-text-primary);
+  border: var(--border-width) solid var(--theme-border);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterButton:hover {
+  background: var(--theme-bg-secondary);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--theme-border);
+}
+
+.active {
+  background: var(--color-primary-red);
+  color: var(--color-white);
+  border-color: var(--color-primary-red);
+}
+
+.active:hover {
+  background: var(--color-primary-red);
+  color: var(--color-white);
+}
+
+.count {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  background: var(--theme-bg-secondary);
+  border-radius: 2px;
+}
+
+.active .count {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,2069 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "JJn4X",
+      "x": 80,
+      "y": -1582,
+      "name": "Home - 包豪斯",
+      "width": 1440,
+      "height": 1200,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ZzZBL",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$white",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            0,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "8ss6y",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "VJVTo",
+                  "name": "logoCircle",
+                  "fill": "$primary-red",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Uqb1H",
+                  "name": "logoSquare",
+                  "fill": "$primary-yellow",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "peFAP",
+                  "name": "logoTriangle",
+                  "fill": "$primary-blue",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "deMkk",
+                  "name": "logoText",
+                  "fill": "$black",
+                  "content": "BAUHAUS",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "900",
+                  "letterSpacing": 4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dptYT",
+              "name": "Navigation",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T4hja",
+                  "name": "navHome",
+                  "fill": "$primary-red",
+                  "content": "Home",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "VN0tx",
+                  "name": "navWorks",
+                  "fill": "$black",
+                  "content": "Works",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "eI4dM",
+                  "name": "navAbout",
+                  "fill": "$black",
+                  "content": "About",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "U1s3g",
+                  "name": "navContact",
+                  "fill": "$black",
+                  "content": "Contact",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0HknQ",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "height": 500,
+          "fill": "$white",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "OJd1U",
+              "x": 0,
+              "y": 0,
+              "name": "Decorations",
+              "width": "fill_container(0)",
+              "height": "fill_container(0)",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "hH5Yw",
+                  "x": 80,
+                  "y": 60,
+                  "name": "decorCircle",
+                  "opacity": 0.8,
+                  "fill": "$primary-red",
+                  "width": 120,
+                  "height": 120
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ddhKM",
+                  "x": 1180,
+                  "y": 80,
+                  "name": "decorSquare",
+                  "opacity": 0.6,
+                  "fill": "$primary-yellow",
+                  "width": 180,
+                  "height": 180
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "Nn1qn",
+                  "x": 180,
+                  "y": 320,
+                  "name": "decorTriangle",
+                  "opacity": 0.7,
+                  "fill": "$primary-blue",
+                  "width": 100,
+                  "height": 100
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fOwau",
+              "x": 678,
+              "y": 250,
+              "name": "Content",
+              "width": "fill_container(0)",
+              "height": "fill_container(0)",
+              "layout": "vertical",
+              "gap": 24,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vlWXw",
+                  "name": "heroTitle1",
+                  "fill": "$black",
+                  "content": "FORM FOLLOWS",
+                  "fontFamily": "Inter",
+                  "fontSize": 72,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "d05GR",
+                  "name": "heroTitle2",
+                  "fill": "$primary-red",
+                  "content": "FUNCTION",
+                  "fontFamily": "Inter",
+                  "fontSize": 72,
+                  "fontWeight": "900",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "6evwq",
+                  "name": "heroSubtitle",
+                  "fill": "$gray-700",
+                  "content": "A BAUHAUS-INSPIRED PORTFOLIO",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "500",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "frame",
+                  "id": "xcHxA",
+                  "name": "CTA Button",
+                  "fill": "$black",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    16,
+                    40
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "di0og",
+                      "name": "ctaText",
+                      "fill": "$white",
+                      "content": "VIEW WORKS",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZYNCN",
+          "name": "Featured Works",
+          "width": "fill_container",
+          "fill": "$gray-100",
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "CYoKA",
+              "name": "Header",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6K0Eg",
+                  "name": "featuredTitle",
+                  "fill": "$black",
+                  "content": "FEATURED WORKS",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "rectangle",
+                  "id": "pnsad",
+                  "name": "featuredLine",
+                  "fill": "$black",
+                  "width": "fill_container",
+                  "height": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lzYPk",
+              "name": "Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "6NeK7",
+                  "name": "Card 1",
+                  "width": "fill_container",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "F02G8",
+                      "name": "Image",
+                      "width": "fill_container",
+                      "height": 160,
+                      "fill": "$gray-300",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "92WPk",
+                          "name": "card1Shape",
+                          "opacity": 0.8,
+                          "fill": "$primary-red",
+                          "width": 20,
+                          "height": 20
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "loLAF",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "stroke": {
+                        "thickness": {
+                          "top": 2
+                        },
+                        "fill": "$black"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pA2ac",
+                          "name": "card1Title",
+                          "fill": "$black",
+                          "content": "GEOMETRIC IDENTITY",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7a41q",
+                          "name": "card1Cat",
+                          "fill": "$gray-700",
+                          "content": "Branding",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "X8zu0",
+                          "name": "card1Year",
+                          "fill": "$primary-red",
+                          "content": "2024",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nBopu",
+                  "name": "Card 2",
+                  "width": "fill_container",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "14lT5",
+                      "name": "Image",
+                      "width": "fill_container",
+                      "height": 160,
+                      "fill": "$gray-300",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "5CTYL",
+                          "name": "card2Shape",
+                          "opacity": 0.8,
+                          "rotation": 45,
+                          "fill": "$primary-yellow",
+                          "width": 20,
+                          "height": 20
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vuK2Q",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "stroke": {
+                        "thickness": {
+                          "top": 2
+                        },
+                        "fill": "$black"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DMpnQ",
+                          "name": "card2Title",
+                          "fill": "$black",
+                          "content": "PRIMARY COLORS",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XFybv",
+                          "name": "card2Cat",
+                          "fill": "$gray-700",
+                          "content": "Print",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "S5a8f",
+                          "name": "card2Year",
+                          "fill": "$primary-red",
+                          "content": "2024",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "grpDI",
+                  "name": "Card 3",
+                  "width": "fill_container",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GH0cx",
+                      "name": "Image",
+                      "width": "fill_container",
+                      "height": 160,
+                      "fill": "$gray-300",
+                      "children": [
+                        {
+                          "type": "polygon",
+                          "polygonCount": 3,
+                          "id": "cpF85",
+                          "name": "card3Shape",
+                          "opacity": 0.8,
+                          "fill": "$primary-blue",
+                          "width": 20,
+                          "height": 20
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ReHle",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "stroke": {
+                        "thickness": {
+                          "top": 2
+                        },
+                        "fill": "$black"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jJhD9",
+                          "name": "card3Title",
+                          "fill": "$black",
+                          "content": "TYPOGRAPHY",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dHrYU",
+                          "name": "card3Cat",
+                          "fill": "$gray-700",
+                          "content": "Typography",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "e5XC1",
+                          "name": "card3Year",
+                          "fill": "$primary-red",
+                          "content": "2023",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cehQw",
+          "name": "About Section",
+          "width": "fill_container",
+          "height": 300,
+          "fill": "$white",
+          "gap": 64,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "3Fx5Q",
+              "name": "Text",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qYNLS",
+                  "name": "aboutTitle",
+                  "fill": "$black",
+                  "content": "THE BAUHAUS PHILOSOPHY",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "OZzB5",
+                  "name": "aboutDesc",
+                  "fill": "$gray-700",
+                  "textGrowth": "fixed-width",
+                  "width": 0,
+                  "content": "Combining functionality with aesthetics, my work embraces the Bauhaus principles of geometric simplicity, primary colors, and purposeful design.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "g6rjX",
+                  "name": "Button",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    14,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lBCVh",
+                      "name": "aboutBtnText",
+                      "fill": "$black",
+                      "content": "LEARN MORE",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zxaHh",
+              "name": "Visual",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "ChgJM",
+                  "name": "aboutCircle",
+                  "fill": "$primary-red",
+                  "width": 180,
+                  "height": 180
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kmZIe",
+          "name": "CTA Section",
+          "width": "fill_container",
+          "height": 200,
+          "fill": "$black",
+          "layout": "vertical",
+          "gap": 24,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jWcLj",
+              "name": "ctaTitle",
+              "fill": "$white",
+              "content": "LET'S CREATE TOGETHER",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "aomes",
+              "name": "Button",
+              "stroke": {
+                "thickness": 2,
+                "fill": "$white"
+              },
+              "padding": [
+                14,
+                32
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KMBAm",
+                  "name": "ctaBtnText",
+                  "fill": "$white",
+                  "content": "GET IN TOUCH",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "snSXJ",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 60,
+          "fill": "$black",
+          "stroke": {
+            "thickness": {
+              "top": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            0,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "z66Vy",
+              "name": "footerText",
+              "fill": "$gray-500",
+              "content": "© 2024 BAUHAUS PORTFOLIO",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "QqUgp",
+              "name": "Shapes",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "kfNxK",
+                  "name": "footerCircle",
+                  "fill": "$primary-red",
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "type": "rectangle",
+                  "id": "lABte",
+                  "name": "footerSquare",
+                  "fill": "$primary-yellow",
+                  "width": 14,
+                  "height": 14
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "4Br4U",
+                  "name": "footerTriangle",
+                  "fill": "$primary-blue",
+                  "width": 14,
+                  "height": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ULgJ3",
+      "x": 1723,
+      "y": -1064,
+      "name": "Works - 包豪斯",
+      "width": 1440,
+      "height": 900,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Z3f8T",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$white",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            0,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "wdpeA",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "dOYIs",
+                  "name": "worksLogoCircle",
+                  "fill": "$primary-red",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "rectangle",
+                  "id": "zPZkY",
+                  "name": "worksLogoSquare",
+                  "fill": "$primary-yellow",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "thHWv",
+                  "name": "worksLogoTriangle",
+                  "fill": "$primary-blue",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "O1gMV",
+                  "name": "worksLogoText",
+                  "fill": "$black",
+                  "content": "BAUHAUS",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "900",
+                  "letterSpacing": 4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KtkZz",
+              "name": "Navigation",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Z4DWu",
+                  "name": "worksNavWorks",
+                  "fill": "$primary-red",
+                  "content": "Works",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dyaFe",
+          "name": "Page Header",
+          "width": "fill_container",
+          "fill": "$gray-100",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KmvKI",
+              "name": "worksPageTitle",
+              "fill": "$black",
+              "content": "WORKS",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "I9qpK",
+              "name": "worksPageSubtitle",
+              "fill": "$gray-700",
+              "content": "6 PROJECTS",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BYL4d",
+          "name": "Filter Bar",
+          "width": "fill_container",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            20,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XqB1p",
+              "name": "Filters",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rrgEU",
+                  "name": "filterAll",
+                  "fill": "$black",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "67mW4",
+                      "name": "filterAllText",
+                      "fill": "$white",
+                      "content": "ALL 6",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PuRcM",
+                  "name": "filterBranding",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K1XHk",
+                      "name": "filterBrandingText",
+                      "fill": "$black",
+                      "content": "BRANDING 1",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UNHpy",
+                  "name": "filterPrint",
+                  "fill": "$white",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xSfYt",
+                      "name": "filterPrintText",
+                      "fill": "$black",
+                      "content": "PRINT 1",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LI4k0",
+          "name": "Works Grid",
+          "width": "fill_container",
+          "gap": 24,
+          "padding": [
+            32,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "wWZWG",
+              "name": "Card 1",
+              "width": "fill_container",
+              "fill": "$white",
+              "stroke": {
+                "thickness": 2,
+                "fill": "$black"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pruPF",
+                  "name": "Image",
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": "$gray-300",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "ucLhK",
+                      "name": "wcard1Shape",
+                      "opacity": 0.8,
+                      "fill": "$primary-red",
+                      "width": 18,
+                      "height": 18
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "61Rug",
+                  "name": "Info",
+                  "width": "fill_container",
+                  "stroke": {
+                    "thickness": {
+                      "top": 2
+                    },
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZzKvK",
+                      "name": "wcard1Title",
+                      "fill": "$black",
+                      "content": "GEOMETRIC IDENTITY",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BRIRZ",
+                      "name": "wcard1Cat",
+                      "fill": "$gray-700",
+                      "content": "Branding",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sHz5y",
+              "name": "Card 2",
+              "width": "fill_container",
+              "fill": "$white",
+              "stroke": {
+                "thickness": 2,
+                "fill": "$black"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OPf4H",
+                  "name": "Image",
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": "$gray-300",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "f6BjT",
+                      "name": "wcard2Shape",
+                      "opacity": 0.8,
+                      "rotation": 45,
+                      "fill": "$primary-yellow",
+                      "width": 18,
+                      "height": 18
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xDsBi",
+                  "name": "Info",
+                  "width": "fill_container",
+                  "stroke": {
+                    "thickness": {
+                      "top": 2
+                    },
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E7NNW",
+                      "name": "wcard2Title",
+                      "fill": "$black",
+                      "content": "PRIMARY COLORS",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FacgQ",
+                      "name": "wcard2Cat",
+                      "fill": "$gray-700",
+                      "content": "Print",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dTZGs",
+              "name": "Card 3",
+              "width": "fill_container",
+              "fill": "$white",
+              "stroke": {
+                "thickness": 2,
+                "fill": "$black"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eE3Bs",
+                  "name": "Image",
+                  "width": "fill_container",
+                  "height": 160,
+                  "fill": "$gray-300",
+                  "children": [
+                    {
+                      "type": "polygon",
+                      "polygonCount": 3,
+                      "id": "80tr5",
+                      "name": "wcard3Shape",
+                      "opacity": 0.8,
+                      "fill": "$primary-blue",
+                      "width": 18,
+                      "height": 18
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hQ8wQ",
+                  "name": "Info",
+                  "width": "fill_container",
+                  "stroke": {
+                    "thickness": {
+                      "top": 2
+                    },
+                    "fill": "$black"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bOPpe",
+                      "name": "wcard3Title",
+                      "fill": "$black",
+                      "content": "TYPOGRAPHY",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o6rqb",
+                      "name": "wcard3Cat",
+                      "fill": "$gray-700",
+                      "content": "Typography",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "W394i",
+      "x": 0,
+      "y": 1300,
+      "name": "About - 包豪斯",
+      "width": 1440,
+      "height": 700,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "3xLMq",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$white",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            0,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "9BFyK",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "BylZy",
+                  "name": "aboutLogoCircle",
+                  "fill": "$primary-red",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "rectangle",
+                  "id": "DoORc",
+                  "name": "aboutLogoSquare",
+                  "fill": "$primary-yellow",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "utK6Y",
+                  "name": "aboutLogoTriangle",
+                  "fill": "$primary-blue",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "RRItN",
+                  "name": "aboutLogoText",
+                  "fill": "$black",
+                  "content": "BAUHAUS",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "900",
+                  "letterSpacing": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ovMPX",
+          "name": "Page Header",
+          "width": "fill_container",
+          "fill": "$gray-100",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "nkwr0",
+              "name": "aboutPageTitle",
+              "fill": "$black",
+              "content": "ABOUT",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "900"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dIIFH",
+          "name": "Content",
+          "width": "fill_container",
+          "gap": 64,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZN5CR",
+              "name": "Text",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Erlcs",
+                  "name": "aboutTextTitle",
+                  "fill": "$black",
+                  "content": "DESIGN PHILOSOPHY",
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "NqOXv",
+                  "name": "aboutTextDesc",
+                  "fill": "$gray-700",
+                  "textGrowth": "fixed-width",
+                  "width": 0,
+                  "content": "Inspired by the Bauhaus movement, I believe in the harmony between form and function. Every design element should serve a purpose.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "text",
+                  "id": "JiP1i",
+                  "name": "aboutSkillsTitle",
+                  "fill": "$black",
+                  "content": "SKILLS",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "XMymm",
+                  "name": "Skills",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "r69Ds",
+                      "name": "skill1",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "2S5sU",
+                          "name": "skill1Dot",
+                          "fill": "$primary-red",
+                          "width": 8,
+                          "height": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "OKkl4",
+                          "name": "skill1Text",
+                          "fill": "$black",
+                          "content": "UI/UX Design",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WhWAc",
+                      "name": "skill2",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "ljOQF",
+                          "name": "skill2Dot",
+                          "fill": "$primary-yellow",
+                          "width": 8,
+                          "height": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "nRpSO",
+                          "name": "skill2Text",
+                          "fill": "$black",
+                          "content": "Brand Identity",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fwkw2",
+                      "name": "skill3",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "UFPNu",
+                          "name": "skill3Dot",
+                          "fill": "$primary-blue",
+                          "width": 8,
+                          "height": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "W7CUg",
+                          "name": "skill3Text",
+                          "fill": "$black",
+                          "content": "Typography",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wYdV6",
+              "name": "Visual",
+              "layout": "vertical",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "wNiJM",
+                  "name": "aboutBigCircle",
+                  "fill": "$primary-red",
+                  "width": 200,
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "FCv6P",
+                  "name": "Stats",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DnjQV",
+                      "name": "stat1",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s74Qk",
+                          "name": "stat1Value",
+                          "fill": "$black",
+                          "content": "5+",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "900"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Eowkj",
+                          "name": "stat1Label",
+                          "fill": "$gray-700",
+                          "content": "Years",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3dNSB",
+                      "name": "stat2",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1wFgq",
+                          "name": "stat2Value",
+                          "fill": "$black",
+                          "content": "50+",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "900"
+                        },
+                        {
+                          "type": "text",
+                          "id": "t3748",
+                          "name": "stat2Label",
+                          "fill": "$gray-700",
+                          "content": "Projects",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DfWJs",
+                      "name": "stat3",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qqmc7",
+                          "name": "stat3Value",
+                          "fill": "$black",
+                          "content": "30+",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "900"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ct5p3",
+                          "name": "stat3Label",
+                          "fill": "$gray-700",
+                          "content": "Clients",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QsqzT",
+      "x": 1600,
+      "y": 1100,
+      "name": "Contact - 包豪斯",
+      "width": 1440,
+      "height": 650,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "oB6e5",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "$white",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "padding": [
+            0,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XVtzu",
+              "name": "Logo",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "T1TIG",
+                  "name": "contactLogoCircle",
+                  "fill": "$primary-red",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ELcYb",
+                  "name": "contactLogoSquare",
+                  "fill": "$primary-yellow",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "polygon",
+                  "polygonCount": 3,
+                  "id": "raB2z",
+                  "name": "contactLogoTriangle",
+                  "fill": "$primary-blue",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "Jl5tj",
+                  "name": "contactLogoText",
+                  "fill": "$black",
+                  "content": "BAUHAUS",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "900",
+                  "letterSpacing": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "8jyhE",
+          "name": "Page Header",
+          "width": "fill_container",
+          "fill": "$gray-100",
+          "stroke": {
+            "thickness": {
+              "bottom": 2
+            },
+            "fill": "$black"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "1vYxQ",
+              "name": "contactPageTitle",
+              "fill": "$black",
+              "content": "CONTACT",
+              "fontFamily": "Inter",
+              "fontSize": 44,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "6Xdcj",
+              "name": "contactPageSubtitle",
+              "fill": "$gray-700",
+              "content": "LET'S WORK TOGETHER",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2eLap",
+          "name": "Content",
+          "width": "fill_container",
+          "gap": 48,
+          "padding": [
+            40,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "FQjbb",
+              "name": "Info",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ryfwo",
+                  "name": "contactInfoTitle",
+                  "fill": "$black",
+                  "content": "GET IN TOUCH",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "a1RWR",
+                  "name": "contactInfoDesc",
+                  "fill": "$gray-700",
+                  "textGrowth": "fixed-width",
+                  "width": 0,
+                  "content": "Have a project in mind? I'd love to hear about it.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "mzfxe",
+                  "name": "contactInfoItem1",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "Mzlae",
+                      "name": "contactInfoDot1",
+                      "fill": "$primary-red",
+                      "width": 14,
+                      "height": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "8XbwT",
+                      "name": "contactInfoText1",
+                      "fill": "$black",
+                      "content": "hello@example.com",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TmGix",
+                  "name": "contactInfoItem2",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "dWI4V",
+                      "name": "contactInfoDot2",
+                      "fill": "$primary-yellow",
+                      "width": 14,
+                      "height": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "f1wIh",
+                      "name": "contactInfoText2",
+                      "fill": "$black",
+                      "content": "Berlin, Germany",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bV35S",
+                  "name": "contactInfoItem3",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "polygon",
+                      "polygonCount": 3,
+                      "id": "Qzxsz",
+                      "name": "contactInfoDot3",
+                      "fill": "$primary-blue",
+                      "width": 14,
+                      "height": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "rplx2",
+                      "name": "contactInfoText3",
+                      "fill": "$black",
+                      "content": "GitHub | LinkedIn | Dribbble",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hePpN",
+              "name": "Form",
+              "width": "fill_container",
+              "fill": "$gray-100",
+              "stroke": {
+                "thickness": 2,
+                "fill": "$black"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YlxLW",
+                  "name": "Field",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M45oH",
+                      "name": "formLabel1",
+                      "fill": "$black",
+                      "content": "NAME",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DCvBZ",
+                      "name": "formInput1",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "$white",
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "$black"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JQ32G",
+                  "name": "Field",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "udAfo",
+                      "name": "formLabel2",
+                      "fill": "$black",
+                      "content": "EMAIL",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "j2cg6",
+                      "name": "formInput2",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "$white",
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "$black"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9xJ7F",
+                  "name": "Field",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rUxsw",
+                      "name": "formLabel3",
+                      "fill": "$black",
+                      "content": "MESSAGE",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KHcL9",
+                      "name": "formInput3",
+                      "width": "fill_container",
+                      "height": 80,
+                      "fill": "$white",
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "$black"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vKFbL",
+                  "name": "formSubmit",
+                  "fill": "$black",
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$black"
+                  },
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "L0UQ7",
+                      "name": "formSubmitText",
+                      "fill": "$white",
+                      "content": "SEND MESSAGE",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "black": {
+      "type": "color",
+      "value": "#212121"
+    },
+    "border-width": {
+      "type": "number",
+      "value": 2
+    },
+    "gray-100": {
+      "type": "color",
+      "value": "#F5F5F5"
+    },
+    "gray-300": {
+      "type": "color",
+      "value": "#E0E0E0"
+    },
+    "gray-500": {
+      "type": "color",
+      "value": "#9E9E9E"
+    },
+    "gray-700": {
+      "type": "color",
+      "value": "#616161"
+    },
+    "primary-blue": {
+      "type": "color",
+      "value": "#1E88E5"
+    },
+    "primary-red": {
+      "type": "color",
+      "value": "#E53935"
+    },
+    "primary-yellow": {
+      "type": "color",
+      "value": "#FDD835"
+    },
+    "spacing-2xl": {
+      "type": "number",
+      "value": 64
+    },
+    "spacing-lg": {
+      "type": "number",
+      "value": 32
+    },
+    "spacing-md": {
+      "type": "number",
+      "value": 24
+    },
+    "spacing-sm": {
+      "type": "number",
+      "value": 16
+    },
+    "spacing-xl": {
+      "type": "number",
+      "value": 48
+    },
+    "spacing-xs": {
+      "type": "number",
+      "value": 8
+    },
+    "white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 4px;
+}
+
+.rectangle {
+  width: calc(var(--shape-md) * 1.5);
+  height: var(--shape-md);
+  border-radius: 4px;
+}
+
+.triangle {
+  width: var(--shape-xs) !important;
+  height: var(--shape-xs) !important;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

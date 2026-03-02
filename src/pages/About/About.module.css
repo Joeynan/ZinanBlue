@@ -1,0 +1,235 @@
+.about {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+}
+
+.header {
+  padding: var(--space-3xl) var(--grid-margin);
+  text-align: center;
+  background: var(--theme-bg-secondary);
+  border-bottom: var(--border-width) solid var(--theme-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--theme-text-primary);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-3xl);
+  padding: var(--space-3xl) 0;
+}
+
+.main {
+  position: relative;
+}
+
+.decorLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100px;
+  background: var(--color-primary-red);
+}
+
+.subtitle {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+  color: var(--theme-text-primary);
+}
+
+.description {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.skillsTitle {
+  font-size: var(--font-size-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+  color: var(--theme-text-primary);
+}
+
+.skills {
+  padding-left: var(--space-lg);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--theme-text-primary);
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.shapes {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.shape2 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  z-index: 2;
+}
+
+.shape3 {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  z-index: 2;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--theme-bg-secondary);
+  border: var(--border-width) solid var(--theme-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--theme-border-light);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-secondary);
+}
+
+.infoValue {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-red);
+}
+
+.philosophy {
+  padding: var(--space-3xl) 0;
+  border-top: var(--border-width) solid var(--theme-border);
+  transition: border-color var(--transition-base);
+}
+
+.philosophyTitle {
+  font-size: var(--font-size-2xl);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--theme-text-primary);
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.principle {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--theme-bg-primary);
+  border: var(--border-width) solid var(--theme-border);
+  transition: all var(--transition-base);
+}
+
+.principle:hover {
+  box-shadow: var(--shadow-md);
+  transform: translate(-4px, -4px);
+}
+
+.principle h4 {
+  font-size: var(--font-size-lg);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+  color: var(--theme-text-primary);
+}
+
+.principle p {
+  font-size: var(--font-size-sm);
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    order: -1;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .subtitle {
+    padding-left: var(--space-sm);
+  }
+
+  .description {
+    padding-left: var(--space-sm);
+  }
+
+  .skillsTitle {
+    padding-left: var(--space-sm);
+  }
+
+  .skills {
+    padding-left: var(--space-sm);
+  }
+
+  .decorLine {
+    left: 0;
+  }
+}

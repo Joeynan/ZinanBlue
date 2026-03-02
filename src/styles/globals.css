@@ -1,0 +1,113 @@
+@import './variables.css';
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--theme-text-primary);
+  background-color: var(--theme-bg-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Bauhaus Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+}
+
+/* Button Base */
+button {
+  font-family: var(--font-family-primary);
+  cursor: pointer;
+  border: var(--border-width) solid var(--theme-border);
+  background: var(--theme-bg-primary);
+  color: var(--theme-text-primary);
+  padding: var(--space-sm) var(--space-md);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
+}
+
+button:hover {
+  background: var(--theme-text-primary);
+  color: var(--theme-bg-primary);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-sm);
+}
+
+button:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+/* Links */
+a {
+  color: var(--theme-text-primary);
+  text-decoration: none;
+  border-bottom: var(--border-width) solid var(--theme-border);
+  transition: all var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary-yellow);
+  color: var(--color-black);
+}

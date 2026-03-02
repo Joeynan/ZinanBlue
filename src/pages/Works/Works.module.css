@@ -1,0 +1,120 @@
+.works {
+  min-height: 100vh;
+  padding-bottom: var(--space-3xl);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+}
+
+.header {
+  padding: var(--space-3xl) var(--grid-margin);
+  text-align: center;
+  background: var(--theme-bg-secondary);
+  border-bottom: var(--border-width) solid var(--theme-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+  color: var(--theme-text-primary);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--theme-text-secondary);
+  letter-spacing: 0.1em;
+}
+
+/* 分类区块 */
+.categorySection {
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.categorySection:first-of-type {
+  margin-top: var(--space-2xl);
+}
+
+.categorySection:last-child {
+  margin-bottom: 0;
+}
+
+/* 分类标题 */
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.categoryTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.categoryIcon {
+  flex-shrink: 0;
+}
+
+.logoIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.categoryTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-primary);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.categoryDecor {
+  flex: 1;
+  height: 2px;
+  background: var(--theme-border);
+}
+
+/* 作品网格 - 横向排列 */
+.worksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .header {
+    padding: var(--space-2xl) var(--grid-margin);
+  }
+
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .categoryTitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .worksGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .categorySection {
+    margin-top: var(--space-2xl);
+  }
+}

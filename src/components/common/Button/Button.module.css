@@ -1,0 +1,101 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: var(--border-width) solid var(--theme-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border-bottom: var(--border-width) solid var(--theme-border);
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Variants */
+.primary {
+  background: var(--theme-text-primary);
+  color: var(--theme-bg-primary);
+}
+
+.primary:hover {
+  background: var(--color-primary-red);
+  border-color: var(--color-primary-red);
+  color: var(--color-white);
+}
+
+.secondary {
+  background: var(--theme-bg-primary);
+  color: var(--theme-text-primary);
+}
+
+.secondary:hover {
+  background: var(--color-primary-yellow);
+  color: var(--color-black);
+}
+
+.outline {
+  background: transparent;
+  color: var(--theme-text-primary);
+}
+
+.outline:hover {
+  background: var(--theme-text-primary);
+  color: var(--theme-bg-primary);
+}
+
+/* Glass variant - Liquid glass effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1.5px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--color-white);
+  box-shadow:
+    var(--glass-shadow),
+    var(--glass-inset-glow);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.glass:hover {
+  background: var(--glass-bg-hover);
+  transform: scale(1.05);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.2),
+    var(--glass-inset-glow);
+}
+
+/* Sizes */
+.sm {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-xs);
+}
+
+.md {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.lg {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--font-size-base);
+}

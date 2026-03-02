@@ -1,0 +1,1 @@
+export { GeometricShape } from './GeometricShape';

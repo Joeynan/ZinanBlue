@@ -1,0 +1,152 @@
+:root {
+  /* Bauhaus Primary Colors */
+  --color-primary-red: #E53935;
+  --color-primary-yellow: #FDD835;
+  --color-primary-blue: #1E88E5;
+
+  /* Black & White */
+  --color-black: #212121;
+  --color-white: #FFFFFF;
+
+  /* Gray Scale */
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+
+  /* Functional Colors */
+  --color-accent: var(--color-primary-red);
+  --color-background: var(--color-white);
+  --color-surface: var(--color-gray-100);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray-700);
+
+  /* Grid System */
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+  --grid-margin: 48px;
+
+  /* Spacing (8px grid) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Shape Sizes */
+  --shape-xs: 24px;
+  --shape-sm: 40px;
+  --shape-md: 64px;
+  --shape-lg: 96px;
+  --shape-xl: 128px;
+
+  /* Typography */
+  --font-family-primary: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-family-mono: 'Courier New', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+  --font-size-4xl: 64px;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Borders */
+  --border-width: 2px;
+  --border-color: var(--color-black);
+
+  /* Shadows (Bauhaus hard-edge) */
+  --shadow-sm: 4px 4px 0 var(--color-black);
+  --shadow-md: 8px 8px 0 var(--color-black);
+  --shadow-lg: 12px 12px 0 var(--color-black);
+  --shadow-accent: 8px 8px 0 var(--color-accent);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* Z-index */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-overlay: 400;
+
+  /* Liquid Glass Effect - Enhanced */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-bg-hover: rgba(255, 255, 255, 0.4);
+  --glass-blur: 40px;
+  --glass-saturate: 200%;
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --glass-radius: 16px;
+  --glass-inset-glow: inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+
+  /* Theme Colors - Light Mode (Default) */
+  --theme-bg-primary: var(--color-white);
+  --theme-bg-secondary: var(--color-gray-100);
+  --theme-text-primary: var(--color-black);
+  --theme-text-secondary: var(--color-gray-700);
+  --theme-text-muted: var(--color-gray-500);
+  --theme-border: var(--color-gray-400);
+  --theme-border-light: var(--color-gray-300);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --theme-bg-primary: #1a1a1a;
+  --theme-bg-secondary: #2d2d2d;
+  --theme-text-primary: var(--color-white);
+  --theme-text-secondary: var(--color-gray-300);
+  --theme-text-muted: var(--color-gray-500);
+  --theme-border: var(--color-gray-600);
+  --theme-border-light: var(--color-gray-700);
+
+  /* Liquid Glass Effect - Dark Mode */
+  --glass-bg: rgba(40, 40, 40, 0.6);
+  --glass-bg-hover: rgba(60, 60, 60, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --glass-inset-glow: inset 0 1px 1px rgba(255, 255, 255, 0.15), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  :root {
+    --grid-margin: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --font-size-4xl: 48px;
+    --font-size-3xl: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --grid-margin: 32px;
+    --space-3xl: 64px;
+  }
+}
