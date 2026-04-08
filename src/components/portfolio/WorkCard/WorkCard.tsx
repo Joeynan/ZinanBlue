@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Work } from '../../../types/work';
+import { useLanguage } from '../../../i18n/LanguageContext';
 import styles from './WorkCard.module.css';
 
 interface WorkCardProps {
@@ -14,6 +15,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
   index,
   variant = 'default',
 }) => {
+  const { t } = useLanguage();
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -63,7 +65,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
           {/* 标签行 */}
           <div className={styles.tagRow}>
             {work.tags.slice(0, 4).map((tag, index) => (
-              <span key={index} className={styles.tag}>{tag}</span>
+              <span key={index} className={styles.tag}>{t('tag.' + tag)}</span>
             ))}
           </div>
         </div>

@@ -1,0 +1,55 @@
+.toggleButton {
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  perspective: 200px;
+}
+
+.toggleButton:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.toggleButton:focus-visible {
+  outline: none;
+}
+
+.toggleButton:focus-visible .toggleSurface {
+  box-shadow: 0 0 0 2px rgba(126, 92, 255, 0.18), var(--glass-surface-shadow-hover);
+}
+
+.toggleSurface {
+  display: inline-flex;
+  min-width: var(--floating-control-min-width);
+}
+
+.toggleSurfaceContent {
+  min-height: var(--floating-control-min-height);
+  min-width: var(--floating-control-min-width);
+  padding: 0 var(--floating-control-padding-inline);
+  box-sizing: border-box;
+}
+
+.toggleInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--floating-control-font-size, var(--font-size-sm, 14px));
+  font-weight: var(--font-weight-bold, 700);
+  letter-spacing: var(--floating-control-letter-spacing, 0.05em);
+  color: var(--color-primary-red);
+  text-transform: none;
+  white-space: nowrap;
+  line-height: 1;
+}

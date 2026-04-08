@@ -1,11 +1,24 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getWorkById } from '../../hooks/useWorks';
+import { useLanguage } from '../../i18n/LanguageContext';
 import { GeometricShape } from '../../components/common/GeometricShape';
+import { GlassSurface } from '../../components/common/GlassSurface';
+import { DetailModule } from '../../types/work';
+import { renderBoldText } from '../../utils/richText';
+import { OverviewSection } from '../../features/work-detail/components/OverviewSection';
+import { ProjectVideoSection } from '../../features/work-detail/components/ProjectVideoSection';
+import { ContentSections } from '../../features/work-detail/components/ContentSections';
+import { DetailsIntro } from '../../features/work-detail/components/DetailsIntro';
+import { DetailMediaBlock } from '../../features/work-detail/components/DetailMediaBlock';
+import { buildDetailRenderItems } from '../../features/work-detail/utils/detailRenderItems';
+import { detailModuleRegistry } from '../../features/work-detail/utils/detailModuleRegistry';
 import styles from './WorkDetail.module.css';
 
 export const WorkDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const { t } = useLanguage();
   const work = getWorkById(id || '');
 
   if (!work) {
@@ -13,15 +26,68 @@ export const WorkDetail: React.FC = () => {
       <div className={styles.notFound}>
         <div className={styles.notFoundContent}>
           <GeometricShape type="triangle" color="red" size="xl" />
-          <h1>作品未找到</h1>
-          <p>抱歉，该作品不存在或已被删除。</p>
+          <h1>{t('detail.notFound')}</h1>
+          <p>{t('detail.notFoundDesc')}</p>
           <Link to="/works" className={styles.backLink}>
-            返回作品列表
+            {t('detail.backToList')}
           </Link>
         </div>
       </div>
     );
   }
+
+  const overviewBlocks = work.contentSections?.find(
+    (section) => section.title === 'Overview'
+  )?.content;
+  const contentSections = work.contentSections?.filter(
+    (section) => section.title !== 'Overview'
+  ) ?? [];
+  const detailRenderItems = buildDetailRenderItems(work);
+  const translateOptional = (value?: Parameters<typeof t>[0]) => (
+    value ? t(value) : undefined
+  );
+  const buildDetailAlt = (imageNumber: number) => (
+    `${work.title} ${t('detail.imageShow')} ${imageNumber}`
+  );
+  const renderDetailMediaBlock = ({
+    image,
+    imageNumber,
+    textLarge,
+    textSmall,
+    description,
+    variant,
+    childrenBetweenTextAndMedia,
+  }: {
+    image: string;
+    imageNumber: number;
+    textLarge?: Parameters<typeof t>[0];
+    textSmall?: Parameters<typeof t>[0];
+    description?: Parameters<typeof t>[0];
+    variant?: 'default' | 'withText' | 'singleImage';
+    childrenBetweenTextAndMedia?: React.ReactNode;
+  }) => (
+    <DetailMediaBlock
+      image={image}
+      alt={buildDetailAlt(imageNumber)}
+      textLarge={translateOptional(textLarge)}
+      textSmall={translateOptional(textSmall)}
+      description={translateOptional(description)}
+      variant={variant}
+      childrenBetweenTextAndMedia={childrenBetweenTextAndMedia}
+    />
+  );
+  const renderDetailModules = (modules: DetailModule[]) => (
+    modules.map((module, index) => {
+      const renderedModule = detailModuleRegistry[module.type](module, { t });
+      return (
+        <React.Fragment
+          key={`${module.position}-${module.placement}-${module.type}-${module.key ?? index}`}
+        >
+          {renderedModule}
+        </React.Fragment>
+      );
+    })
+  );
 
   return (
     <motion.div
@@ -30,14 +96,19 @@ export const WorkDetail: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Back Button Container - sticky 跟随页面滚动 */}
+      {/* Back Button Container */}
       <div className={styles.backButtonContainer}>
-        <div className={styles.container}>
-          <Link to="/works" className={styles.backButton}>
+        <Link to="/works" className={styles.backButton}>
+          <GlassSurface
+            variant="button"
+            interactive
+            className={styles.backButtonSurface}
+            contentClassName={styles.backButtonSurfaceContent}
+          >
             <span className={styles.backArrow}>←</span>
-            返回
-          </Link>
-        </div>
+            {t('detail.back')}
+          </GlassSurface>
+        </Link>
       </div>
 
       {/* Hero Image */}
@@ -79,70 +150,24 @@ export const WorkDetail: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.container}>
           <div className={styles.main}>
-            {/* Description - 项目简介 + 信息框 */}
-            <motion.section
-              className={styles.sectionWithInfo}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <div className={styles.descriptionWrapper}>
-                <h2 className={styles.sectionTitle}>
-                  <span className={styles.decorLine} />
-                  项目简介
-                </h2>
-                <p className={styles.description}>{work.description}</p>
-              </div>
+            <OverviewSection
+              title={t('detail.overview')}
+              description={t(work.description)}
+              overviewBlocks={overviewBlocks}
+              year={work.year}
+              role={work.role}
+              tags={work.tags}
+              awards={work.awards}
+              t={t}
+            />
 
-              {/* 项目信息框 - 在项目简介右侧 */}
-              <div className={styles.infoBox}>
-                <div className={styles.infoRow}>
-                  <span className={styles.infoLabel}>Year</span>
-                  <span className={styles.infoValue}>{work.year}</span>
-                </div>
-                <div className={styles.infoRow}>
-                  <span className={styles.infoLabel}>Role</span>
-                  <span className={styles.infoValue}>{work.role || '-'}</span>
-                </div>
-                <div className={styles.infoRow}>
-                  <span className={styles.infoLabel}>Tags</span>
-                  <div className={styles.tagsList}>
-                    {work.tags.map((tag, index) => (
-                      <span key={index} className={styles.tagItem}>{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className={styles.infoRow}>
-                  <span className={styles.infoLabel}>Award</span>
-                  <span className={styles.infoValue}>-</span>
-                </div>
-              </div>
-            </motion.section>
+            <ProjectVideoSection
+              title={t('detail.video')}
+              videoUrl={work.videoUrl}
+              iframeTitle={`${work.title} ${t('detail.videoTitle')}`}
+            />
 
-            {/* Project Video - 项目视频 */}
-            {work.videoUrl && (
-              <motion.section
-                className={styles.section}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <h2 className={styles.sectionTitle}>
-                  <span className={styles.decorLine} />
-                  项目视频
-                </h2>
-                <div className={styles.videoContainer}>
-                  <iframe
-                    className={styles.videoIframe}
-                    src={work.videoUrl}
-                    title={`${work.title} 项目视频`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </motion.section>
-            )}
+            <ContentSections sections={contentSections} t={t} />
 
             {/* Project Details - 项目介绍（图片+文字） */}
             <motion.section
@@ -152,31 +177,40 @@ export const WorkDetail: React.FC = () => {
               transition={{ delay: 0.7 }}
             >
               <h2 className={styles.sectionTitle}>
-                <span className={styles.decorLine} />
-                项目介绍
+                {t('detail.details')}
               </h2>
+              <DetailsIntro
+                title={work.detailsIntro ? t(work.detailsIntro.title) : undefined}
+                description={work.detailsIntro ? t(work.detailsIntro.description) : undefined}
+              />
               <div className={styles.projectDetails}>
-                {/* 从 work.images[1] 开始遍历（images[0] 用于 Hero 大图） */}
-                {work.images.slice(1).map((image, index) => (
-                  <div key={index} className={styles.detailItem}>
+                {detailRenderItems.map((item) => (
+                  <React.Fragment key={`detail-render-item-${item.position}`}>
+                    {renderDetailModules(item.beforeModules)}
+                    {renderDetailMediaBlock({
+                      image: item.image,
+                      imageNumber: item.position + 1,
+                      textLarge: item.media.largeText,
+                      textSmall: item.media.smallText,
+                      description: item.media.description,
+                      variant: item.media.variant,
+                      childrenBetweenTextAndMedia: renderDetailModules(item.betweenModules),
+                    })}
+                    {renderDetailModules(item.afterModules)}
+                  </React.Fragment>
+                ))}
+
+                {/* 结尾图片区域（4个设计特征之后） */}
+                {work.endingImages && work.endingImages.map((endingImage, endingIndex) => (
+                  <div key={`ending-image-${endingIndex}`} className={styles.detailItem}>
+                    {endingImage.largeText && <p className={styles.textLarge}>{t(endingImage.largeText)}</p>}
+                    {endingImage.smallText && <p className={styles.textSmall}>{renderBoldText(t(endingImage.smallText))}</p>}
                     <div className={styles.detailImage}>
                       <img
-                        src={image}
-                        alt={`${work.title} 展示 ${index + 2}`}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        src={endingImage.image}
+                        alt={`${work.title} ${t('detail.endingImage')} ${endingIndex + 1}`}
                       />
                     </div>
-                    <p className={styles.detailDescription}>
-                      {/* 占位文字，用户可以后续自定义 */}
-                      {index === 0 && '在项目的初始阶段，我们深入研究了用户需求和市场趋势。通过大量的用户访谈和数据分析，我们确定了设计的核心方向。'}
-                      {index === 1 && '设计草图阶段，我们探索了多种视觉方案。每一个概念都经过反复推敲，从色彩搭配到版式布局。'}
-                      {index === 2 && '在原型设计阶段，我们创建了高保真的交互原型。通过不断的用户测试和迭代优化，我们逐步完善了用户体验。'}
-                      {index === 3 && '视觉设计阶段，我们将品牌理念融入到每一个设计元素中，创造出既现代又经典的视觉效果。'}
-                      {index === 4 && '开发阶段，我们采用模块化的方式，确保代码的可维护性和可扩展性。'}
-                      {index === 5 && '响应式设计是项目的重点之一。我们确保产品在各种设备上都能完美呈现。'}
-                      {index === 6 && '性能优化是项目成功的关键。通过技术手段，我们将页面加载时间控制在理想范围内。'}
-                      {index >= 7 && '项目最终呈现出令人满意的成果。感谢您的浏览！'}
-                    </p>
                   </div>
                 ))}
               </div>

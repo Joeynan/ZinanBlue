@@ -1,74 +1,52 @@
-import { useState, useEffect } from 'react';
 import { Work, Category } from '../types/work';
-import { worksData } from '../data/works';
+import { worksData } from '../data/works/index';
 
-// 根据 ID 获取单个作品
+const categories: Category[] = [
+  { id: 'all', name: 'All', slug: 'all', count: worksData.length },
+  ...Array.from(
+    worksData.reduce((categoryMap, work) => {
+      const count = categoryMap.get(work.categoryType) || 0;
+      categoryMap.set(work.categoryType, count + 1);
+      return categoryMap;
+    }, new Map<string, number>()).entries()
+  ).map(([categoryType, count]) => ({
+    id: categoryType,
+    name: categoryType,
+    slug: categoryType,
+    count,
+  })),
+];
+
+const featuredWorks = worksData.filter((work) => work.featured);
+
 export const getWorkById = (id: string): Work | undefined => {
   return worksData.find((work) => work.id === id);
 };
 
-// 获取相关作品（同分类或随机）
 export const getRelatedWorks = (currentId: string, limit: number = 3): Work[] => {
   const currentWork = getWorkById(currentId);
   if (!currentWork) return [];
 
-  // 同分类的作品
   const sameCategory = worksData.filter(
-    (work) => work.id !== currentId && work.category === currentWork.category
+    (work) => work.id !== currentId && work.categoryType === currentWork.categoryType
   );
 
-  // 如果同分类不够，补充其他作品
   if (sameCategory.length >= limit) {
     return sameCategory.slice(0, limit);
   }
 
   const others = worksData.filter(
-    (work) => work.id !== currentId && work.category !== currentWork.category
+    (work) => work.id !== currentId && work.categoryType !== currentWork.categoryType
   );
 
   return [...sameCategory, ...others].slice(0, limit);
 };
 
 export const useWorks = () => {
-  const [works, setWorks] = useState<Work[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadData = async () => {
-      setLoading(true);
-
-      setWorks(worksData);
-
-      const categoryMap = new Map<string, number>();
-      worksData.forEach((work) => {
-        const count = categoryMap.get(work.category) || 0;
-        categoryMap.set(work.category, count + 1);
-      });
-
-      const categoryList: Category[] = [
-        { id: 'all', name: 'All', slug: 'all', count: worksData.length },
-        ...Array.from(categoryMap.entries()).map(([name, count], index) => ({
-          id: `cat-${index}`,
-          name,
-          slug: name.toLowerCase().replace(/\s+/g, '-'),
-          count,
-        })),
-      ];
-
-      setCategories(categoryList);
-      setLoading(false);
-    };
-
-    loadData();
-  }, []);
-
-  const featuredWorks = works.filter((work) => work.featured);
-
   return {
-    works,
+    works: worksData,
     categories,
     featuredWorks,
-    loading,
+    loading: false,
   };
 };

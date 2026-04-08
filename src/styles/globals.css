@@ -31,6 +31,20 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
 }
 
+/* Disable uppercase for Chinese */
+[data-lang="zh"] h1,
+[data-lang="zh"] h2,
+[data-lang="zh"] h3,
+[data-lang="zh"] h4,
+[data-lang="zh"] h5,
+[data-lang="zh"] h6 {
+  text-transform: none;
+}
+
+[data-lang="zh"] button {
+  text-transform: none;
+}
+
 h1 {
   font-size: var(--font-size-4xl);
 }

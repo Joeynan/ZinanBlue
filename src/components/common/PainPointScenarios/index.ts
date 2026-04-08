@@ -1,0 +1,1 @@
+export { PainPointScenarios } from './PainPointScenarios';

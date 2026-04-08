@@ -9,8 +9,8 @@ export const useFilter = (works: Work[]) => {
       return works;
     }
     return works.filter((work) => {
-      const categorySlug = work.category.toLowerCase().replace(/\s+/g, '-');
-      return categorySlug === selectedCategory || work.category === selectedCategory;
+      const categorySlug = work.categoryType.toLowerCase().replace(/\s+/g, '-');
+      return categorySlug === selectedCategory || work.categoryType === selectedCategory;
     });
   }, [works, selectedCategory]);
 

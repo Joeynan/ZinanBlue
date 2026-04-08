@@ -6,4 +6,40 @@
 
 .main {
   flex: 1;
+  --floating-control-top: 96px;
+  --floating-control-inline-offset: var(--grid-margin);
+  --floating-control-min-height: 56px;
+  --floating-control-min-width: 128px;
+  --floating-control-padding-inline: 22px;
+  --floating-control-font-size: var(--font-size-sm);
+  --floating-control-letter-spacing: 0.05em;
+  --floating-control-icon-size: 28px;
+  --floating-control-z-index: 100;
+}
+
+.langToggleSticky {
+  position: fixed;
+  top: var(--floating-control-top);
+  right: var(--floating-control-inline-offset);
+  z-index: var(--floating-control-z-index);
+}
+
+@media (max-width: 768px) {
+  .main {
+    --floating-control-top: 80px;
+    --floating-control-min-height: 52px;
+    --floating-control-min-width: 112px;
+    --floating-control-padding-inline: 18px;
+    --floating-control-icon-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    --floating-control-top: 74px;
+    --floating-control-min-height: 48px;
+    --floating-control-min-width: 96px;
+    --floating-control-padding-inline: 16px;
+    --floating-control-icon-size: 22px;
+  }
 }

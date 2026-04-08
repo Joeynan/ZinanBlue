@@ -48,7 +48,7 @@
   --shape-xl: 128px;
 
   /* Typography */
-  --font-family-primary: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-family-primary: 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'Arial', sans-serif;
   --font-family-mono: 'Courier New', monospace;
 
   /* Font Sizes */
@@ -105,6 +105,13 @@
   --glass-radius: 16px;
   --glass-inset-glow: inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.05);
 
+  /* Shared Glass Surface Tokens */
+  --glass-surface-highlight-light: rgba(255, 255, 255, 0.42);
+  --glass-surface-bottom-glow-light: rgba(126, 92, 255, 0.16);
+  --glass-surface-border-light: rgba(255, 255, 255, 0.62);
+  --glass-surface-shadow-light: 0 18px 40px rgba(31, 38, 86, 0.14);
+  --glass-surface-text-shadow-light: 0 1px 12px rgba(0, 0, 0, 0.28);
+
   /* Theme Colors - Light Mode (Default) */
   --theme-bg-primary: var(--color-white);
   --theme-bg-secondary: var(--color-gray-100);
@@ -131,6 +138,12 @@
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   --glass-inset-glow: inset 0 1px 1px rgba(255, 255, 255, 0.15), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+
+  --glass-surface-highlight-light: rgba(255, 255, 255, 0.18);
+  --glass-surface-bottom-glow-light: rgba(108, 92, 255, 0.22);
+  --glass-surface-border-light: rgba(255, 255, 255, 0.16);
+  --glass-surface-shadow-light: 0 20px 48px rgba(0, 0, 0, 0.48);
+  --glass-surface-text-shadow-light: 0 1px 12px rgba(0, 0, 0, 0.36);
 }
 
 /* Responsive adjustments */

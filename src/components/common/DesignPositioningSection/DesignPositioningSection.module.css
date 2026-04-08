@@ -1,0 +1,606 @@
+.sectionSurface {
+  margin: 12px 0 72px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.heading {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  line-height: 1.7;
+  color: var(--theme-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.headingDescription {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--theme-text-secondary, rgba(0, 0, 0, 0.75));
+  white-space: pre-line;
+}
+
+.headingUnderline {
+  width: 96px;
+  height: 4px;
+  border-radius: 999px;
+  background: #6e3bd8;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(36px, 4vw, 64px) minmax(300px, 360px);
+  align-items: stretch;
+}
+
+.mapPanel {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 44px;
+  overflow: visible;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(110, 59, 216, 0.08), transparent 22%),
+    linear-gradient(180deg, #f8f7fb 0%, #f3f3f6 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 18px 48px rgba(110, 59, 216, 0.06);
+}
+
+.mapInner {
+  position: relative;
+  width: 84%;
+  min-height: 520px;
+  isolation: isolate;
+}
+
+.verticalAxis,
+.horizontalAxis {
+  position: absolute;
+  background: rgba(176, 178, 182, 0.38);
+}
+
+.verticalAxis {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+}
+
+.horizontalAxis {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+}
+
+.verticalAxisLabel,
+.horizontalAxisLabel {
+  position: absolute;
+  color: #6e3bd8;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.verticalAxisLabel {
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.horizontalAxisLabel {
+  right: -8px;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
+.mapCard {
+  position: absolute;
+  top: var(--card-top);
+  left: var(--card-left);
+  width: 128px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 14px 30px rgba(32, 33, 36, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: translate(-50%, -50%);
+  animation: floatCard 8s ease-in-out infinite;
+}
+
+.mapCardPortrait {
+  width: 102px;
+}
+
+.mapCardLandscape {
+  width: 114px;
+}
+
+.mapCardWide {
+  width: 128px;
+}
+
+.mapCardImageFrame {
+  aspect-ratio: 1.3;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(54, 58, 65, 0.92), rgba(145, 149, 158, 0.62));
+}
+
+.mapCardPortrait .mapCardImageFrame {
+  aspect-ratio: 0.82;
+}
+
+.mapCardLandscape .mapCardImageFrame {
+  aspect-ratio: 1.5;
+}
+
+.mapCardWide .mapCardImageFrame {
+  aspect-ratio: 1.62;
+}
+
+.mapCardImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mapCardPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  text-align: center;
+}
+
+.mapCardPlaceholderText {
+  color: rgba(255, 255, 255, 0.86);
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mapCardTitle {
+  min-height: 26px;
+  margin-top: 7px;
+  color: #5c5f63;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.connector {
+  position: relative;
+  min-height: 600px;
+}
+
+.connectorDot {
+  position: absolute;
+  top: 106px;
+  left: -42px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #6e3bd8;
+  box-shadow: 0 0 45px rgba(110, 59, 216, 0.6);
+  animation: connectorPulse 3.2s ease-in-out infinite;
+}
+
+.connectorLine {
+  position: absolute;
+  top: 122px;
+  left: -6px;
+  right: 0;
+  border-top: 4px dashed rgba(110, 59, 216, 0.6);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 600px;
+}
+
+.visionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.visionLabel {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e0e1f6;
+  color: #3c3e4f;
+  font-family: var(--font-family-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.visionCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 142px;
+  padding: 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6e3bd8, #7e4bff);
+  box-shadow: 0 18px 36px rgba(110, 59, 216, 0.2);
+}
+
+.heroIcon,
+.plusIcon {
+  display: block;
+  color: #fff;
+}
+
+.heroIcon {
+  width: 76px;
+  height: 76px;
+}
+
+.plusIcon {
+  width: 46px;
+  height: 46px;
+}
+
+.visionTitle {
+  margin: 0;
+  color: #2f3336;
+  font-family: 'Manrope', 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.visionDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.visionParagraph {
+  margin: 0;
+  color: #5c5f63;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.attributesCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: auto;
+  padding: 22px 24px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(176, 178, 182, 0.12);
+  box-shadow: 0 16px 30px rgba(47, 51, 54, 0.08);
+}
+
+.attributesLabel {
+  color: #6e3bd8;
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.attributesList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attributeItem {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.attributeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  color: #6e3bd8;
+}
+
+.attributeIconSvg {
+  width: 20px;
+  height: 20px;
+}
+
+.attributeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.attributeTitle {
+  margin: 0;
+  color: #2f3336;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.attributeDescription {
+  margin: 0;
+  color: #5c5f63;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.mapCard:nth-child(1) {
+  animation-delay: -0.2s;
+}
+
+.mapCard:nth-child(2) {
+  animation-delay: -1.4s;
+}
+
+.mapCard:nth-child(3) {
+  animation-delay: -2.1s;
+}
+
+.mapCard:nth-child(4) {
+  animation-delay: -3.4s;
+}
+
+.mapCard:nth-child(5) {
+  animation-delay: -1.8s;
+}
+
+.mapCard:nth-child(6) {
+  animation-delay: -2.8s;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, calc(-50% - 6px));
+  }
+}
+
+@keyframes connectorPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 45px rgba(110, 59, 216, 0.6);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 55px rgba(110, 59, 216, 0.72);
+  }
+}
+
+[data-theme="dark"] .heading {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="dark"] .headingDescription {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+[data-theme="dark"] .mapPanel {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(140, 98, 255, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(27, 25, 36, 0.96), rgba(20, 19, 29, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 22px 54px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .verticalAxis,
+[data-theme="dark"] .horizontalAxis {
+  background: rgba(196, 198, 207, 0.16);
+}
+
+[data-theme="dark"] .verticalAxisLabel,
+[data-theme="dark"] .horizontalAxisLabel,
+[data-theme="dark"] .attributesLabel {
+  color: rgba(170, 138, 255, 0.96);
+}
+
+[data-theme="dark"] .mapCard {
+  background: rgba(40, 36, 56, 0.82);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .mapCardImageFrame {
+  background: linear-gradient(135deg, rgba(22, 25, 32, 0.96), rgba(88, 94, 108, 0.56));
+}
+
+[data-theme="dark"] .mapCardTitle,
+[data-theme="dark"] .visionTitle,
+[data-theme="dark"] .attributeTitle {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="dark"] .visionLabel {
+  background: rgba(145, 122, 255, 0.18);
+  color: rgba(234, 230, 255, 0.92);
+}
+
+[data-theme="dark"] .visionCard {
+  background: linear-gradient(135deg, #6a38d5, #8154ff);
+  box-shadow: 0 20px 42px rgba(41, 25, 88, 0.46);
+}
+
+[data-theme="dark"] .visionParagraph,
+[data-theme="dark"] .attributeDescription {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+[data-theme="dark"] .attributesCard {
+  background: rgba(30, 27, 42, 0.9);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .attributeIcon {
+  color: rgba(158, 125, 255, 0.96);
+}
+
+[data-theme="dark"] .connectorDot {
+  background: #7c4bff;
+  box-shadow: 0 0 54px rgba(124, 75, 255, 0.58);
+}
+
+[data-theme="dark"] .connectorLine {
+  border-top-color: rgba(162, 126, 255, 0.72);
+}
+
+@media (max-width: 1180px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 48px minmax(280px, 320px);
+  }
+
+  .mapPanel {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .mapPanel {
+    min-height: 540px;
+  }
+
+  .mapInner {
+    width: 88%;
+    min-height: 460px;
+  }
+
+  .aside {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionSurface {
+    margin: 8px 0 56px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .heading {
+    font-size: var(--font-size-xl);
+  }
+
+  .headingDescription {
+    font-size: var(--font-size-sm);
+  }
+
+  .mapPanel {
+    min-height: 420px;
+    padding: 22px;
+  }
+
+  .mapInner {
+    width: 90%;
+    min-height: 360px;
+  }
+
+  .mapCard {
+    width: 118px;
+  }
+
+  .mapCardPortrait {
+    width: 94px;
+  }
+
+  .mapCardLandscape {
+    width: 106px;
+  }
+
+  .mapCardWide {
+    width: 118px;
+  }
+
+  .horizontalAxisLabel {
+    right: 2px;
+    transform: translate(0, -50%);
+  }
+
+  .visionCard {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .heroIcon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .plusIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .visionTitle {
+    font-size: 22px;
+  }
+
+  .visionParagraph {
+    font-size: 15px;
+  }
+
+  .attributesCard {
+    padding: 20px;
+  }
+}

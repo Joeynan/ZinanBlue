@@ -1,0 +1,201 @@
+.sectionSurface {
+  margin: 8px 0 56px;
+}
+
+.introText {
+  margin: 0 0 32px;
+  color: var(--theme-text-secondary, rgba(0, 0, 0, 0.75));
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.cardsGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.56));
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  box-shadow: 0 30px 60px -15px rgba(168, 129, 255, 0.12);
+}
+
+.imageFrame {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  background: rgba(244, 244, 245, 0.5);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 0.92;
+}
+
+.imagePlaceholder {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  background:
+    linear-gradient(135deg, rgba(88, 88, 92, 0.9), rgba(134, 134, 139, 0.72)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent);
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.16), transparent 16%),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.14), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 48%);
+  mix-blend-mode: screen;
+}
+
+.placeholderBadge {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px 36px 38px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #a881ff;
+}
+
+.eyebrowText {
+  color: #a881ff;
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 24px;
+  color: #18181b;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paragraph {
+  margin: 0;
+  color: #5c5e70;
+  font-family: 'WenQuanYi Zen Hei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.625;
+}
+
+@media (max-width: 1100px) {
+  .cardsGrid {
+    gap: 24px;
+  }
+
+  .content {
+    padding: 22px 26px 32px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .imageFrame,
+  .image,
+  .imagePlaceholder {
+    min-height: 240px;
+  }
+
+  .content {
+    padding: 20px 18px 24px;
+  }
+
+  .title {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+  }
+}
+
+[data-theme="dark"] .card {
+  background: linear-gradient(180deg, rgba(56, 49, 78, 0.88), rgba(42, 37, 59, 0.84));
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="dark"] .title {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="dark"] .paragraph {
+  color: rgba(255, 255, 255, 0.72);
+}

@@ -1,48 +1,69 @@
 import { motion } from 'framer-motion';
-import { Button } from '../../components/common/Button';
 import { WorkGallery } from '../../components/portfolio/WorkGallery';
 import { useWorks } from '../../hooks/useWorks';
-import heroImage from '../../assets/images/hero.png';
+import { useLanguage } from '../../i18n/LanguageContext';
+import { HomeHeroCta } from './components/HomeHeroCta';
+import { LineWaves } from './components/LineWaves';
 import styles from './Home.module.css';
 
 export const Home: React.FC = () => {
   const { featuredWorks } = useWorks();
+  const { t } = useLanguage();
 
   return (
     <div className={styles.home}>
       {/* Hero Section - Full Screen Image */}
       <section className={styles.hero}>
-        <img src={heroImage} alt="Hero" className={styles.heroImage} />
         <div className={styles.heroOverlay} />
+        <div className={styles.heroWaves}>
+          <LineWaves
+            warpIntensity={0.86}
+            edgeFadeWidth={0.12}
+            brightness={0.18}
+            colorCycleSpeed={1.12}
+            enableMouseInteraction
+            mouseInfluence={1.8}
+          />
+        </div>
+        <div className={styles.heroGlow} />
         <div className={styles.heroContent}>
-          <motion.h1
-            className={styles.heroTitle}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            创意无限创意无限创意无限创意无限创意
-            
-          </motion.h1>
+          <div className={styles.heroInner}>
+            <motion.p
+              className={styles.heroEyebrow}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.18 }}
+            >
+              {t('home.heroEyebrow')}
+            </motion.p>
 
-          <motion.p
-            className={styles.heroSubtitle}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            探索设计的可能性
-          </motion.p>
+            <motion.h1
+              className={styles.heroTitle}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              {t('home.heroTitle')}
+            </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <Button to="/works" variant="glass" size="lg">
-              View Works
-            </Button>
-          </motion.div>
+            <motion.p
+              className={styles.heroSubtitle}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              {t('home.heroSubtitle')}
+            </motion.p>
+
+            <motion.div
+              className={styles.heroActions}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.68 }}
+            >
+              <HomeHeroCta to="/works">{t('home.viewWorks')}</HomeHeroCta>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -50,7 +71,7 @@ export const Home: React.FC = () => {
       <section className={styles.featured}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Featured Works</h2>
+            <h2 className={styles.sectionTitle}>{t('home.featuredWorks')}</h2>
             <div className={styles.sectionDecor} />
           </div>
 
