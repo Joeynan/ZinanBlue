@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const fengJi: Work = {
   id: '14',
-  title: 'FengJi',
+  title: { zh: '逢集-乡村赶集数字化体验设计', en: 'FengJi' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/feng-ji/thumb.png',
@@ -64,7 +64,10 @@ export const fengJi: Work = {
   year: 2023,
   role: 'Interaction Designer',
   technologies: ['Figma', 'User Research', 'Prototyping', 'Service Design'],
-  awards: ['UXDA 2023 Best Development Application Award', 'UXDA 2023 National Second Prize'],
+  awards: [
+    { zh: 'UXDA 2023 最佳开发应用奖', en: 'UXDA 2023 Best Development Application Award' },
+    { zh: 'UXDA 2023 全国二等奖', en: 'UXDA 2023 National Second Prize' },
+  ],
 
   shapeType: 'square',
   accentColor: 'red',

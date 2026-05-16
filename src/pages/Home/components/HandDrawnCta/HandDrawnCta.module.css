@@ -1,0 +1,72 @@
+.ctaLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  min-width: 200px;
+  min-height: 48px;
+  text-decoration: none;
+  color: var(--doodle-stroke, #212121);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ctaLink:hover {
+  transform: translateY(-2px) rotate(-0.5deg);
+}
+
+.ctaLink:active {
+  transform: translateY(1px) rotate(0.3deg);
+}
+
+.ctaBorder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ctaBorderDisplay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ctaLabel {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-handwrite);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ctaArrow {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.ctaLink:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .ctaLink {
+    min-width: 160px;
+    padding: 10px 24px;
+  }
+
+  .ctaLabel {
+    font-size: 18px;
+  }
+}

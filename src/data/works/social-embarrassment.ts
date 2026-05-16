@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const socialEmbarrassment: Work = {
   id: '16',
-  title: 'Digital Social Embarrassment Installation',
+  title: { zh: '网络社死装置设计', en: 'Digital Social Embarrassment Installation' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/social-embarrassment/thumb.png',

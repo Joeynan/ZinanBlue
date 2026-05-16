@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const flappingWingAircraft: Work = {
   id: '15',
-  title: 'Bio-inspired Four-Wing Flapping-Wing UAV',
+  title: { zh: '基于仿生扑翼的四翼无人机设计研究', en: 'Bio-inspired Four-Wing Flapping-Wing UAV' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/flapping-wing-aircraft/thumb.png',
@@ -51,8 +51,8 @@ export const flappingWingAircraft: Work = {
   ],
 
   // ========== 项目信息 ==========
-  category: { zh: '硬件设计与开发', en: 'Hardware Design & Development' },
-  categoryType: 'hardware-design-development',
+  category: { zh: '其他设计', en: 'Other Design' },
+  categoryType: 'other-design',
   tags: ['Biomimetic Design', 'Robotic Mechanism', 'Motion Simulation', 'Aerodynamic Prototyping'],
   year: 2024,
   role: '【在此处填写角色】',

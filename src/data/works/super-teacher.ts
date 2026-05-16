@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const superTeacher: Work = {
   id: '7',
-  title: 'Super Teacher',
+  title: { zh: '超级教师—AR+AI 实时赋能智慧课堂', en: 'Super Teacher— AR + AI Empowered Smart Classroom' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/super-teacher/thumb.png',
@@ -13,7 +13,7 @@ export const superTeacher: Work = {
     '/images/super-teacher/detail-4.png',
   ],
 
-  description: { zh: '超级教师—AR+AI 虇能智慧课堂', en: 'Super Teacher — AR + AI Empowered Smart Classroom' },
+  description: { zh: '超级教师—AR+AI 实时赋能智慧课堂', en: 'Super Teacher — AR + AI Empowered Smart Classroom' },
 
   contentSections: [
     {
@@ -53,6 +53,10 @@ export const superTeacher: Work = {
   shapeType: 'circle',
   accentColor: 'red',
   videoUrl: 'https://www.youtube.com/embed/LI6UGLL1lnQ',
+  awards: [
+    { zh: 'DIA 中国设计智造大奖 — 佳作奖', en: 'DIA China Design Intelligence Award — Honorable Mention' },
+    { zh: '2025 Rokid 全国高校 AR 应用挑战赛 — 入围奖', en: '2025 Rokid University AR Application Challenge — Finalist' },
+  ],
 
   // ========== Pain Point Scenarios ==========
   painPointScenarios: {

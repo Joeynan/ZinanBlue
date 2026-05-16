@@ -47,7 +47,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
         <div className={styles.mediaContainer}>
           <img
             src={work.thumbnail}
-            alt={work.title}
+            alt={t(work.title)}
             className={styles.image}
             loading="lazy"
           />
@@ -58,7 +58,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
         <div className={styles.infoPanel}>
           {/* 标题行：标题左 + 年份右 */}
           <div className={styles.titleRow}>
-            <h3 className={styles.title}>{work.title}</h3>
+            <h3 className={styles.title}>{t(work.title)}</h3>
             <span className={styles.year}>{work.year}</span>
           </div>
 

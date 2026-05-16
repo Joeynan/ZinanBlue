@@ -314,7 +314,7 @@ export type DetailModule = {
 
 export interface Work {
   id: string;
-  title: string;
+  title: LocalizedString;
   description: LocalizedString;
   category: LocalizedString;
   categoryType: CategoryType;
@@ -331,7 +331,7 @@ export interface Work {
   url?: string;
   github?: string;
   videoUrl?: string;
-  awards?: string[];
+  awards?: LocalizedString[];
   contentSections?: ContentSection[];
   detailsIntro?: DetailsIntro;
   imageDescriptions?: LocalizedString[];

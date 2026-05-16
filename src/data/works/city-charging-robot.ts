@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const cityChargingRobot: Work = {
   id: '10',
-  title: 'City Charging Robot',
+  title: { zh: 'EBOT-城市老旧小区充电机器人', en: 'City Charging Robot' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/city-charging-robot/thumb.png',
@@ -72,9 +72,9 @@ export const cityChargingRobot: Work = {
 
   // ========== 奖项 ==========
   awards: [
-    'Goldenreed Industrial Design Award 2024',
-    'First Prize of Outstanding Industrial Design Graduation Project Award, Jiangsu Province',
-    'Third Prize in the National 2424 Youth Designer Competition',
+    { zh: '金芦苇工业设计奖 2024', en: 'Goldenreed Industrial Design Award 2024' },
+    { zh: '江苏省优秀工业设计毕业设计奖 — 一等奖', en: 'First Prize of Outstanding Industrial Design Graduation Project Award, Jiangsu Province' },
+    { zh: '全国 2024 青年设计师大赛 — 三等奖', en: 'Third Prize in the National 2024 Youth Designer Competition' },
   ],
 
   // ========== 图片 4 上方的大字+小字内容 ==========

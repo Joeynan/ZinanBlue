@@ -47,7 +47,7 @@ export const WorkDetail: React.FC = () => {
     value ? t(value) : undefined
   );
   const buildDetailAlt = (imageNumber: number) => (
-    `${work.title} ${t('detail.imageShow')} ${imageNumber}`
+    `${t(work.title)} ${t('detail.imageShow')} ${imageNumber}`
   );
   const renderDetailMediaBlock = ({
     image,
@@ -120,7 +120,7 @@ export const WorkDetail: React.FC = () => {
       >
         <img
           src={work.images[0] || work.thumbnail}
-          alt={work.title}
+          alt={t(work.title)}
           className={styles.heroImage}
         />
         <div className={styles.heroDecor}>
@@ -141,7 +141,7 @@ export const WorkDetail: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            {work.title}
+            {t(work.title)}
           </motion.h1>
         </div>
       </div>

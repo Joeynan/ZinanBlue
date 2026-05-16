@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const hairDryer: Work = {
   id: '17',
-  title: 'AirTrip-Travel Glam Styler',
+  title: { zh: 'AirTrip-差旅卷直吹风机', en: 'AirTrip-Travel Glam Styler' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/hair-dryer/thumb.png',

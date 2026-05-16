@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const selfHealing: Work = {
   id: '8',
-  title: 'SelfHealing',
+  title: { zh: 'SelfHealing-自我疗愈按摩仪', en: 'SelfHealing' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/self-healing/thumb.png',
@@ -27,6 +27,9 @@ export const selfHealing: Work = {
 
   // YouTube 视频
   videoUrl: 'https://www.youtube.com/embed/6manhlKPr1w',
+  awards: [
+    { zh: '中美创客大赛 — 入围奖', en: 'China-US Maker Competition — Finalist' },
+  ],
 
   // 大字内容（主标题）
   description: { zh: 'SelfHealing-自我疗愈按摩仪', en: 'SelfHealing — Self-Healing Massage Device' },

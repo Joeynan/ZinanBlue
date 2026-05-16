@@ -50,6 +50,7 @@
   /* Typography */
   --font-family-primary: 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'Arial', sans-serif;
   --font-family-mono: 'Courier New', monospace;
+  --font-family-handwrite: 'Caveat', 'Ma Shan Zheng', cursive;
 
   /* Font Sizes */
   --font-size-xs: 12px;

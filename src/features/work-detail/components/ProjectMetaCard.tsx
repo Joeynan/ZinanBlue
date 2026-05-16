@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../../../pages/WorkDetail/WorkDetail.module.css';
 import { TranslateFn } from './types';
+import { LocalizedString } from '../../../i18n/types';
 
 interface ProjectMetaCardProps {
   year: number;
   role?: string;
   tags: string[];
-  awards?: string[];
+  awards?: LocalizedString[];
   t: TranslateFn;
 }
 
@@ -47,7 +48,7 @@ export const ProjectMetaCard: React.FC<ProjectMetaCardProps> = ({
                 alt=""
                 className={styles.awardIcon}
               />
-              {award}
+              {t(award)}
             </span>
           ))}
         </div>

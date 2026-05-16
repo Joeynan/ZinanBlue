@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const yuune: Work = {
   id: '13',
-  title: 'YUUNE-Camping Stove',
+  title: { zh: '原野YUUNE - 户外露营炉头', en: 'YUUNE-Camping Stove' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/yuune/thumb.png',

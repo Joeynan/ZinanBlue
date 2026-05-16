@@ -8,16 +8,17 @@ const readSource = (relativePath) => {
 };
 
 const homeSource = readSource('src/pages/Home/Home.tsx');
+const handDrawnHeroSource = readSource('src/pages/Home/components/HandDrawnHero/HandDrawnHero.tsx');
 const homeHeroCtaSource = readSource('src/pages/Home/components/HomeHeroCta.tsx');
 const homeHeroCtaStyleSource = readSource('src/pages/Home/components/HomeHeroCta.module.css');
 const glassSurfaceSource = readSource('src/components/common/GlassSurface/GlassSurface.tsx');
 const packageJson = JSON.parse(readSource('package.json'));
 
 test('Home page mounts the hero CTA for the works action', () => {
-  assert.match(homeSource, /HomeHeroCta/);
-  assert.match(homeSource, /to="\/works"/);
-  assert.doesNotMatch(homeSource, /variant="glass"/);
-  assert.doesNotMatch(homeSource, /HomeLiquidCta/);
+  assert.match(handDrawnHeroSource, /HomeHeroCta/);
+  assert.match(handDrawnHeroSource, /to="\/works"/);
+  assert.doesNotMatch(handDrawnHeroSource, /variant="glass"/);
+  assert.doesNotMatch(handDrawnHeroSource, /HomeLiquidCta/);
 });
 
 test('HomeHeroCta removes liquid-glass dependency and keeps magnetic pointer handling', () => {

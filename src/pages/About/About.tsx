@@ -12,14 +12,27 @@ const bioParagraphKeys = [
 ];
 
 const awardKeys = [
+  // 2025
+  'about.award.rokidGold',
+  'about.award.spatialJoy',
   'about.award.redDot',
+  'about.award.dia',
+  'about.award.diaBronze',
+  // 2024
   'about.award.epda',
   'about.award.idea',
-  'about.award.dia',
+  'about.award.dia2024',
   'about.award.goldenReed',
-  'about.award.rokidGold',
-  'about.award.rokidBronze',
-  'about.award.diaBronze',
+  'about.award.youthDesigner',
+  // 2023
+  'about.award.uxdaDev',
+  'about.award.uxda',
+] as const;
+
+const exhibitionKeys = [
+  'about.exhibition.1',
+  'about.exhibition.2',
+  'about.exhibition.3',
 ] as const;
 
 export const About: React.FC = () => {
@@ -54,7 +67,7 @@ export const About: React.FC = () => {
 
             <div className={styles.profileMeta}>
               <h2 className={styles.profileName}>{t('about.profileName')}</h2>
-              <p className={styles.profileNameEn}>{t('about.profileNameEn')}</p>
+              <p className={styles.profileEducation}>{t('about.profileEducation')}</p>
               <p className={styles.profileRole}>{t('about.profileRole')}</p>
             </div>
           </motion.aside>

@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const runTouch: Work = {
   id: '9',
-  title: 'RunTouch--Blind Runner Touch Wearable Design',
+  title: { zh: 'RunTouch-盲人触摸跑步穿戴设计', en: 'RunTouch--Blind Runner Touch Wearable Design' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/run-touch/thumb.png',
@@ -74,8 +74,8 @@ export const runTouch: Work = {
   shapeType: 'square',
   accentColor: 'blue',
   awards: [
-    '2025 DIA Design Intelligence Award - Honorable Mention',
-    '2025 Shenzhen Assistive Device Design Competition - Third Prize',
+    { zh: '2025 DIA 设计智造奖 — 佳作奖', en: '2025 DIA Design Intelligence Award - Honorable Mention' },
+    { zh: '2025 深圳辅助器具设计竞赛 — 三等奖', en: '2025 Shenzhen Assistive Device Design Competition - Third Prize' },
   ],
 
   // ========== 图片上方的大字+小字内容（可配置位置）==========

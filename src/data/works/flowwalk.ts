@@ -23,7 +23,7 @@ const flowwalkSectionImages = {
 
 export const flowwalk: Work = {
   id: '1',
-  title: 'FlowWalk',
+  title: { zh: 'FlowWalk-AR + AI 户外正念步行疗愈系统', en: 'FlowWalk' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/flowwalk/thumb.png',
@@ -102,6 +102,11 @@ export const flowwalk: Work = {
   accentColor: 'red',
   featured: true,
   videoUrl: 'https://www.youtube.com/embed/GDxW5CeUMCY',
+  awards: [
+    { zh: '2025 Rokid 全国高校 AR 应用挑战赛 — 金奖', en: '2025 Rokid University AR Application Challenge — Gold Award' },
+    { zh: 'Spatial Joy 2025 全球 AR/AI 开发者大赛总决赛 — 铜奖', en: 'Spatial Joy 2025 Global AR/AI Developer Competition Finals — Bronze Award' },
+    { zh: '2025 DIA 中国设计智造大奖创新孵化 — 铜奖', en: '2025 DIA China Design Intelligence Award Innovation Incubation — Bronze Award' },
+  ],
 
   // ========== Steps Section ==========
   stepsSection: {

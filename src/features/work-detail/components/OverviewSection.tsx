@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ContentBlock } from '../../../types/work';
+import { LocalizedString } from '../../../i18n/types';
 import { renderBoldText } from '../../../utils/richText';
 import styles from '../../../pages/WorkDetail/WorkDetail.module.css';
 import { ProjectMetaCard } from './ProjectMetaCard';
@@ -13,7 +14,7 @@ interface OverviewSectionProps {
   year: number;
   role?: string;
   tags: string[];
-  awards?: string[];
+  awards?: LocalizedString[];
   t: TranslateFn;
   delay?: number;
 }

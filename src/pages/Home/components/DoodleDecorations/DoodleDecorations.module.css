@@ -1,0 +1,102 @@
+.container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hiddenSvg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.eye {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.smiley {
+  position: absolute;
+  transform: translate(0, -30%);
+  pointer-events: none;
+}
+
+.underline {
+  position: absolute;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  top: 12%;
+  right: 18%;
+  pointer-events: none;
+}
+
+.brace {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  pointer-events: none;
+}
+
+.arrowDoodle {
+  position: absolute;
+  bottom: 28%;
+  left: 15%;
+  pointer-events: none;
+}
+
+.dots {
+  position: absolute;
+  top: 18%;
+  left: 25%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: 20%;
+  right: 12%;
+  pointer-events: none;
+}
+
+.zigzag {
+  position: absolute;
+  bottom: 15%;
+  left: 30%;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .star {
+    top: 8%;
+    right: 10%;
+  }
+
+  .brace {
+    display: none;
+  }
+
+  .arrowDoodle {
+    bottom: 32%;
+    left: 8%;
+  }
+
+  .dots {
+    top: 10%;
+    left: 15%;
+  }
+
+  .heart {
+    bottom: 18%;
+    right: 8%;
+  }
+
+  .zigzag {
+    display: none;
+  }
+}

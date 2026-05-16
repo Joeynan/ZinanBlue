@@ -82,6 +82,12 @@
   color: var(--theme-text-primary);
 }
 
+.profileEducation {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+}
+
 .profileRole {
   font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);

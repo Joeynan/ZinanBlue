@@ -5,8 +5,8 @@ import { flowwalk } from './flowwalk';
 import { superTeacher } from './super-teacher';
 
 // Hardware Design & Development
+import { hardwareProject4 } from './hardware-project-4';
 import { selfHealing } from './self-healing';
-import { flappingWingAircraft } from './flapping-wing-aircraft';
 import { socialEmbarrassment } from './social-embarrassment';
 
 // Industrial Design
@@ -17,7 +17,9 @@ import { vacuumSealer } from './vacuum-sealer';
 import { yuune } from './yuune';
 import { fengJi } from './feng-ji';
 import { hairDryer } from './hair-dryer';
-import { industrialProject2 } from './industrial-project-2';
+
+// Other Design
+import { flappingWingAircraft } from './flapping-wing-aircraft';
 
 export const worksData: Work[] = [
   // HCI Research
@@ -25,8 +27,8 @@ export const worksData: Work[] = [
   superTeacher,
 
   // Hardware Design & Development
+  hardwareProject4,
   selfHealing,
-  flappingWingAircraft,
   socialEmbarrassment,
 
   // Industrial Design
@@ -37,5 +39,7 @@ export const worksData: Work[] = [
   yuune,
   fengJi,
   hairDryer,
-  industrialProject2,
+
+  // Other Design
+  flappingWingAircraft,
 ];

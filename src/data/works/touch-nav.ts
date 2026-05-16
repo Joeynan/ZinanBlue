@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const touchNav: Work = {
   id: '11',
-  title: 'TouchNav Tactile Navigation Cane',
+  title: { zh: 'Touchnav-触摸导航盲杖', en: 'TouchNav Tactile Navigation Cane' },
 
   // ========== Overview 区块 ==========
   thumbnail: '/images/touch-nav/thumb.png',
@@ -68,11 +68,11 @@ export const touchNav: Work = {
 
   // ========== 奖项 ==========
   awards: [
-    'Red Dot Award: Design Concept 2025',
-    'European Product Design Award 2025',
-    'IDEA 2024 Bronze Award',
-    'European Product Design Award 2024',
-    'DIA 2024 Excellence Award',
+    { zh: '红点设计概念奖 2025', en: 'Red Dot Award: Design Concept 2025' },
+    { zh: '意大利 ADesgin 铜奖', en: 'ADesgin Bronze Award' },
+    { zh: 'IDEA 2024 铜奖', en: 'IDEA 2024 Bronze Award' },
+    { zh: '欧洲产品设计奖 2024', en: 'European Product Design Award 2024' },
+    { zh: 'DIA中国设计智造大奖-佳作奖', en: 'DIA 2024 Excellence Award' },
   ],
 
   // ========== 图片 4 上方的大字+小字内容 ==========

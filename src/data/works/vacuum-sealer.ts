@@ -2,7 +2,7 @@ import { Work } from '../../types/work';
 
 export const vacuumSealer: Work = {
   id: '12',
-  title: 'DICOOO-FreshTag Vacuum Sealer',
+  title: { zh: 'DICOOO-标签打印真空封口机', en: 'DICOOO-FreshTag Vacuum Sealer' },
 
   // ========== Overview 区块 ==========
     // ========== 图片 ==========
@@ -62,6 +62,10 @@ export const vacuumSealer: Work = {
 
   shapeType: 'circle',
   accentColor: 'blue',
+  awards: [
+    { zh: '中华设计奖 — 入围奖', en: 'China Design Award — Finalist' },
+    { zh: '米兰设计周 — 国家三等奖', en: 'Milan Design Week — National Third Prize' },
+  ],
 
   // ========== 图片 4 上方的大字+小字内容 ==========
   detailText4Large: { zh: '作品展示', en: 'Design Showcase' },
