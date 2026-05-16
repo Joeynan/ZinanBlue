@@ -79,6 +79,7 @@ export const selfHealing: Work = {
   technologies: ['【待填写】'],
   shapeType: 'circle',
   accentColor: 'yellow',
+  featured: true,
 
   // ========== 图片上方的大字+小字内容（可配置位置）==========
   detailTexts: [

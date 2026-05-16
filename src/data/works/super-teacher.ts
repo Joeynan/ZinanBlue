@@ -52,6 +52,7 @@ export const superTeacher: Work = {
   technologies: ['AR (Rokid)', 'AI/LLM', 'Figma', 'User Research'],
   shapeType: 'circle',
   accentColor: 'red',
+  featured: true,
   videoUrl: 'https://www.youtube.com/embed/LI6UGLL1lnQ',
   awards: [
     { zh: 'DIA 中国设计智造大奖 — 佳作奖', en: 'DIA China Design Intelligence Award — Honorable Mention' },

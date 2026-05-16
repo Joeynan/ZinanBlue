@@ -10,6 +10,7 @@ const readSource = (relativePath) => {
 const homeSource = readSource('src/pages/Home/Home.tsx');
 const handDrawnHeroSource = readSource('src/pages/Home/components/HandDrawnHero/HandDrawnHero.tsx');
 const handDrawnTextSource = readSource('src/pages/Home/components/HandDrawnText/HandDrawnText.tsx');
+const handDrawnTextStyles = readSource('src/pages/Home/components/HandDrawnText/HandDrawnText.module.css');
 const doodleCanvasSource = readSource('src/pages/Home/components/DoodleCanvas/DoodleCanvas.tsx');
 const doodleDecorationsSource = readSource('src/pages/Home/components/DoodleDecorations/DoodleDecorations.tsx');
 const handDrawnCtaSource = readSource('src/pages/Home/components/HandDrawnCta/HandDrawnCta.tsx');
@@ -36,6 +37,12 @@ test('HandDrawnText uses hardcoded English with clip-path animation', () => {
   assert.match(handDrawnTextSource, /welcome to my website/);
   assert.match(handDrawnTextSource, /useReducedMotion/);
   assert.doesNotMatch(handDrawnTextSource, /useLanguage/);
+});
+
+test('HandDrawnText keeps the subtitle on one line while fitting it inside the viewport', () => {
+  assert.match(handDrawnTextStyles, /\.subtitle\s*\{[^}]*white-space:\s*nowrap;/s);
+  assert.match(handDrawnTextStyles, /\.line2\s*\{[^}]*max-width:\s*100%;/s);
+  assert.match(handDrawnTextStyles, /font-size:\s*clamp\(48px,\s*min\(10vw,\s*8\.8vw\),\s*132px\);/);
 });
 
 test('DoodleCanvas supports interactive drawing and defaults to draw mode on', () => {

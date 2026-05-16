@@ -111,4 +111,5 @@ export const hardwareProject4: Work = {
   technologies: ['【待填写】'],
   shapeType: 'circle',
   accentColor: 'blue',
+  featured: true,
 };

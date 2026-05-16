@@ -31,8 +31,19 @@
   grid-row: span 1;
 }
 
+.featured .link {
+  display: flex;
+  flex-direction: column;
+}
+
 .featured .mediaContainer {
-  aspect-ratio: 16 / 9;
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+
+.featured .infoPanel {
+  flex-shrink: 0;
 }
 
 .compact {

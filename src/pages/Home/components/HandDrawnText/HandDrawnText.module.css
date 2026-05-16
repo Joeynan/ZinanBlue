@@ -12,6 +12,8 @@
 }
 
 .line2 {
+  width: 100%;
+  max-width: 100%;
 }
 
 .greeting {
@@ -27,7 +29,7 @@
 .subtitle {
   display: inline-block;
   font-family: var(--font-family-handwrite);
-  font-size: clamp(80px, 12vw, 156px);
+  font-size: clamp(48px, min(10vw, 8.8vw), 132px);
   font-weight: 700;
   color: var(--doodle-stroke, #212121);
   line-height: 1.1;

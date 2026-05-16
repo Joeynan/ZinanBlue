@@ -29,12 +29,6 @@ const awardKeys = [
   'about.award.uxda',
 ] as const;
 
-const exhibitionKeys = [
-  'about.exhibition.1',
-  'about.exhibition.2',
-  'about.exhibition.3',
-] as const;
-
 export const About: React.FC = () => {
   const { t } = useLanguage();
 
