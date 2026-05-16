@@ -2,6 +2,7 @@ import { WorkGallery } from '../../components/portfolio/WorkGallery';
 import { useWorks } from '../../hooks/useWorks';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { HandDrawnHero } from './components/HandDrawnHero/HandDrawnHero';
+import { FeaturedWorksCta } from './components/FeaturedWorksCta/FeaturedWorksCta';
 import styles from './Home.module.css';
 
 export const Home: React.FC = () => {
@@ -26,6 +27,7 @@ export const Home: React.FC = () => {
             layout="featured"
             columns={4}
             gap="md"
+            trailingItem={<FeaturedWorksCta />}
           />
         </div>
       </section>

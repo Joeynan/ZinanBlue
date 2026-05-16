@@ -11,6 +11,7 @@ const homeSource = readSource('src/pages/Home/Home.tsx');
 const handDrawnHeroSource = readSource('src/pages/Home/components/HandDrawnHero/HandDrawnHero.tsx');
 const handDrawnTextSource = readSource('src/pages/Home/components/HandDrawnText/HandDrawnText.tsx');
 const handDrawnTextStyles = readSource('src/pages/Home/components/HandDrawnText/HandDrawnText.module.css');
+const handDrawnHeroStyles = readSource('src/pages/Home/components/HandDrawnHero/HandDrawnHero.module.css');
 const doodleCanvasSource = readSource('src/pages/Home/components/DoodleCanvas/DoodleCanvas.tsx');
 const doodleDecorationsSource = readSource('src/pages/Home/components/DoodleDecorations/DoodleDecorations.tsx');
 const handDrawnCtaSource = readSource('src/pages/Home/components/HandDrawnCta/HandDrawnCta.tsx');
@@ -65,6 +66,11 @@ test('HandDrawnCta renders a sketch-style button with rough.js border', () => {
   assert.match(handDrawnCtaSource, /rough/);
   assert.match(handDrawnCtaSource, /Link/);
   assert.match(handDrawnCtaSource, /borderPath/);
+});
+
+test('HandDrawnHero keeps the CTA clickable above the drawing canvas', () => {
+  assert.match(handDrawnHeroStyles, /\.heroContent\s*\{[^}]*z-index:\s*20;[^}]*pointer-events:\s*none;/s);
+  assert.match(handDrawnHeroStyles, /\.heroActions\s*\{[^}]*pointer-events:\s*auto;/s);
 });
 
 test('roughjs is installed as a dependency', () => {

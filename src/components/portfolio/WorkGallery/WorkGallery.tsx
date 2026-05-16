@@ -8,6 +8,7 @@ interface WorkGalleryProps {
   layout?: 'grid' | 'masonry' | 'featured';
   columns?: 2 | 3 | 4;
   gap?: 'sm' | 'md' | 'lg';
+  trailingItem?: React.ReactNode;
 }
 
 export const WorkGallery: React.FC<WorkGalleryProps> = ({
@@ -15,6 +16,7 @@ export const WorkGallery: React.FC<WorkGalleryProps> = ({
   layout = 'grid',
   columns = 3,
   gap = 'md',
+  trailingItem,
 }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,6 +62,7 @@ export const WorkGallery: React.FC<WorkGalleryProps> = ({
           variant={layout === 'featured' && index === 0 ? 'featured' : 'default'}
         />
       ))}
+      {trailingItem}
     </motion.div>
   );
 };

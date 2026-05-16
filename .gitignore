@@ -2,6 +2,7 @@ node_modules/
 dist/
 .vercel/
 .vite/
+.playwright-mcp/
 *.tsbuildinfo
 .DS_Store
 

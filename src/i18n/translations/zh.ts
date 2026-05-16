@@ -17,6 +17,7 @@ export const zh: Record<string, string> = {
   'home.heroName': '李梓楠',
   'home.drawHint': '在这里涂鸦！',
   'home.viewWorks': '查看作品',
+  'home.viewMoreWorks': '查看更多作品',
   'home.featuredWorks': '精选作品',
 
   // Works

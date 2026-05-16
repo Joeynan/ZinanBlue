@@ -17,6 +17,7 @@ export const en: Record<string, string> = {
   'home.heroName': 'Zinan Li',
   'home.drawHint': 'Draw here!',
   'home.viewWorks': 'View Works',
+  'home.viewMoreWorks': 'View More Works',
   'home.featuredWorks': 'Featured Works',
 
   // Works
