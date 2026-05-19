@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './i18n/LanguageContext';
 import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
@@ -20,6 +21,7 @@ function App() {
             <Route path="about" element={<About />} />
           </Route>
         </Routes>
+        <Analytics />
       </BrowserRouter>
     </LanguageProvider>
   );
