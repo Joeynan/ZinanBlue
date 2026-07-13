@@ -15,6 +15,7 @@ interface OverviewSectionProps {
   role?: string;
   tags: string[];
   awards?: LocalizedString[];
+  demoUrl?: string;
   t: TranslateFn;
   delay?: number;
 }
@@ -27,6 +28,7 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
   role,
   tags,
   awards,
+  demoUrl,
   t,
   delay = 0.5,
 }) => (
@@ -53,6 +55,7 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
       role={role}
       tags={tags}
       awards={awards}
+      demoUrl={demoUrl}
       t={t}
     />
   </motion.section>

@@ -2,6 +2,7 @@ import { Work } from '../../types/work';
 
 // HCI Research
 import { flowwalk } from './flowwalk';
+import { singpal } from './singpal';
 import { superTeacher } from './super-teacher';
 
 // Hardware Design & Development
@@ -24,6 +25,7 @@ import { flappingWingAircraft } from './flapping-wing-aircraft';
 export const worksData: Work[] = [
   // HCI Research
   flowwalk,
+  singpal,
   superTeacher,
 
   // Hardware Design & Development

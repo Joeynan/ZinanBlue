@@ -158,6 +158,7 @@ export const WorkDetail: React.FC = () => {
               role={work.role}
               tags={work.tags}
               awards={work.awards}
+              demoUrl={work.demoUrl}
               t={t}
             />
 

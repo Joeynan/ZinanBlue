@@ -24,7 +24,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: baseDelay + sectionIndex * 0.1 }}
       >
-        <h2 className={styles.sectionTitle}>{section.title}</h2>
+        {section.title && <h2 className={styles.sectionTitle}>{section.title}</h2>}
         <div className={styles.sectionContent}>
           {section.content.map((block, blockIndex) => (
             <p

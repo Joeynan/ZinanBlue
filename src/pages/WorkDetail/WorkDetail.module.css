@@ -528,6 +528,39 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Demo 链接 */
+.demoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--theme-text-secondary);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 4px;
+  line-height: 1.4;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+
+.demoLink:hover {
+  color: var(--theme-text-primary);
+  border-color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .demoLink {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.demoLinkIcon {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
 /* 奖项图标 */
 .awardIcon {
   width: 14px;

@@ -94,6 +94,38 @@
   color: var(--theme-text-secondary);
 }
 
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  color: var(--theme-text-secondary);
+}
+
+.contactLabel {
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-muted);
+  min-width: 2.5em;
+}
+
+.contactValue {
+  color: var(--theme-text-secondary);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+a.contactValue:hover {
+  color: var(--theme-text-primary);
+  text-decoration: underline;
+}
+
 .bioColumn {
   display: flex;
   flex-direction: column;

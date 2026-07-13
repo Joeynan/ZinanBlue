@@ -36,6 +36,8 @@ export const en: Record<string, string> = {
   'about.profileNameEn': '李梓楠',
   'about.profileEducation': 'SUSTech · Master\'s Student',
   'about.profileRole': 'HCI Designer / AI+AR Developer',
+  'about.wechat': 'WeChat',
+  'about.email': 'Email',
   'about.bioTitle': 'About',
   'about.bioParagraph1': 'I am currently pursuing my degree in Industrial Design Engineering at Southern University of Science and Technology. My research mainly focuses on AR+AI human-computer interaction, user experience design, and interaction design. I am particularly interested in how emerging intelligent technologies can enter real-world contexts and be transformed into interactions that are more natural, effective, and human-centered. At present, I am exploring two main research directions: the application of AI-powered proactive agents combined with AR in classroom settings, investigating how they can provide teachers with real-time and context-appropriate support; and the design of AR glasses for psychological healing and relaxation, exploring how technology can support emotional regulation and mental well-being in everyday life.',
   'about.bioParagraph2': 'As a designer, XR developer, and human-computer interaction researcher, I have consistently worked to combine design research with technical implementation, turning ideas into experiential and testable system prototypes. My design works have received multiple domestic and international awards, including the Red Dot Design Award: Design Concept, European Product Design Award, IDEA, DIA China Design Intelligence Award, and Golden Reed Industrial Design Award Nomination. Meanwhile, several XR projects led by my team, such as FlowWalk and Super Teacher, have received awards including the Gold Award in the Rokid University AR Innovation Challenge, Bronze Award in the Rokid Global Developer Challenge, and Bronze Award in the DIA China Design Intelligence Award. Related applications have also been launched on the Rokid App Store. Among them, FlowWalk has entered the innovation incubation stage and is expected to be released on more device platforms in the future.',
@@ -44,6 +46,8 @@ export const en: Record<string, string> = {
   'about.awardsTitle': 'Awards',
   'about.awardCategoryDesign': 'Design Awards',
   'about.awardCategoryProject': 'Project Awards',
+  // 2026
+  'about.award.redDot2026': '2026 Red Dot Award: Design Concept',
   // 2025
   'about.award.rokidGold': '2025 Rokid University AR Application Challenge — Gold Award',
   'about.award.spatialJoy': '2025 Spatial Joy Global AR/AI Developer Competition Finals — Bronze Award',
@@ -69,6 +73,7 @@ export const en: Record<string, string> = {
   'detail.role': 'Role',
   'detail.tags': 'Tags',
   'detail.award': 'Award',
+  'detail.demo': 'Demo',
   'detail.video': 'Video',
   'detail.details': 'Details',
   'detail.videoTitle': 'Project Video',
@@ -135,4 +140,8 @@ export const en: Record<string, string> = {
   'tag.Arduino': 'Arduino',
   'tag.3D Printing': '3D Printing',
   'tag.Desktop Toy Innovation': 'Desktop Toy Innovation',
+  'tag.Children': 'Children',
+  'tag.Music': 'Music',
+  'tag.Creation': 'Creation',
+  'tag.Generative AI': 'Generative AI',
 };

@@ -106,6 +106,7 @@ export const flowwalk: Work = {
     { zh: '2025 Rokid 全国高校 AR 应用挑战赛 — 金奖', en: '2025 Rokid University AR Application Challenge — Gold Award' },
     { zh: 'Spatial Joy 2025 全球 AR/AI 开发者大赛总决赛 — 铜奖', en: 'Spatial Joy 2025 Global AR/AI Developer Competition Finals — Bronze Award' },
     { zh: '2025 DIA 中国设计智造大奖创新孵化 — 铜奖', en: '2025 DIA China Design Intelligence Award Innovation Incubation — Bronze Award' },
+    { zh: '2026 红点概念设计奖', en: '2026 Red Dot Award: Design Concept' },
   ],
 
   // ========== Steps Section ==========

@@ -12,6 +12,8 @@ const bioParagraphKeys = [
 ];
 
 const awardKeys = [
+  // 2026
+  'about.award.redDot2026',
   // 2025
   'about.award.rokidGold',
   'about.award.spatialJoy',
@@ -63,6 +65,16 @@ export const About: React.FC = () => {
               <h2 className={styles.profileName}>{t('about.profileName')}</h2>
               <p className={styles.profileEducation}>{t('about.profileEducation')}</p>
               <p className={styles.profileRole}>{t('about.profileRole')}</p>
+              <div className={styles.contactList}>
+                <span className={styles.contactItem}>
+                  <span className={styles.contactLabel}>{t('about.wechat')}</span>
+                  <span className={styles.contactValue}>Xz249111</span>
+                </span>
+                <span className={styles.contactItem}>
+                  <span className={styles.contactLabel}>{t('about.email')}</span>
+                  <a href="mailto:12433275@mail.sustech.edu.cn" className={styles.contactValue}>12433275@mail.sustech.edu.cn</a>
+                </span>
+              </div>
             </div>
           </motion.aside>
 

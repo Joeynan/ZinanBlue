@@ -329,6 +329,7 @@ export interface Work {
   accentColor?: ShapeColor;
   featured?: boolean;
   url?: string;
+  demoUrl?: string;
   github?: string;
   videoUrl?: string;
   awards?: LocalizedString[];

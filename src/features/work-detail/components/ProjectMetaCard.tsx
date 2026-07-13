@@ -8,6 +8,7 @@ interface ProjectMetaCardProps {
   role?: string;
   tags: string[];
   awards?: LocalizedString[];
+  demoUrl?: string;
   t: TranslateFn;
 }
 
@@ -16,6 +17,7 @@ export const ProjectMetaCard: React.FC<ProjectMetaCardProps> = ({
   role,
   tags,
   awards,
+  demoUrl,
   t,
 }) => (
   <div className={styles.infoBox}>
@@ -56,5 +58,21 @@ export const ProjectMetaCard: React.FC<ProjectMetaCardProps> = ({
         <span className={styles.infoValue}>-</span>
       )}
     </div>
+    {demoUrl && (
+      <div className={styles.infoRow}>
+        <span className={styles.infoLabel}>{t('detail.demo')}</span>
+        <a
+          href={demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.demoLink}
+        >
+          {demoUrl}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.demoLinkIcon}>
+            <path d="M3.5 1H11V8.5M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    )}
   </div>
 );

@@ -36,6 +36,8 @@ export const zh: Record<string, string> = {
   'about.profileNameEn': 'Li Zinan',
   'about.profileEducation': '南方科技大学 · 硕士研究生',
   'about.profileRole': '人机交互设计师 / AI+AR 开发者',
+  'about.wechat': '微信',
+  'about.email': '邮箱',
   'about.bioTitle': 'About',
   'about.bioParagraph1': '目前，我就读于南方科技大学工业设计工程专业。我的研究方向主要聚焦于 AR+AI 人机交互、用户体验设计与交互设计，并持续关注新兴智能技术如何进入真实场景，转化为更自然、有效且具有温度的交互体验。目前，我正在探索两个研究方向：AI 结合 AR 的主动式 Agent 在课堂场景中的应用，思考其如何为教师提供实时、适切的信息支持；AR 眼镜辅助用户进行心理疗愈与放松的交互设计，探索技术如何在日常生活中支持情绪调节与身心关照。',
   'about.bioParagraph2': '作为一名设计师、XR 开发者以及人机交互研究员，我始终致力于将设计研究与技术实现相结合，推动概念从想法走向可体验、可验证的系统原型。我的设计作品曾获得多项国内外设计奖项，包括红点设计概念奖、欧洲产品设计奖、IDEA、DIA 中国设计智造大赛佳作奖、金芦苇工业设计奖提名奖等。与此同时，我带领团队完成的多个 XR 项目 FlowWalk 正念步行、超级教师等，获得了 Rokid 高校应用创新挑战赛金奖、Rokid 全球开发者挑战赛铜奖、DIA 中国设计智造大赛铜奖等荣誉，并且相关应用目前已上架 Rokid 应用商店。其中 FlowWalk 进入创新孵化阶段，在未来也会在更多的设备平台上架。',
@@ -44,6 +46,8 @@ export const zh: Record<string, string> = {
   'about.awardsTitle': '获奖经历',
   'about.awardCategoryDesign': '设计奖项',
   'about.awardCategoryProject': '项目奖项',
+  // 2026
+  'about.award.redDot2026': '2026 红点概念设计奖',
   // 2025
   'about.award.rokidGold': '2025 Rokid 全国高校 AR 应用挑战赛 — 金奖',
   'about.award.spatialJoy': '2025 Spatial Joy 全球 AR/AI 开发者大赛总决赛 — 铜奖',
@@ -69,6 +73,7 @@ export const zh: Record<string, string> = {
   'detail.role': '角色',
   'detail.tags': '标签',
   'detail.award': '获奖',
+  'detail.demo': 'Demo',
   'detail.video': '视频',
   'detail.details': '详情',
   'detail.videoTitle': '项目视频',
@@ -135,4 +140,8 @@ export const zh: Record<string, string> = {
   'tag.Arduino': 'Arduino',
   'tag.3D Printing': '3D 打印',
   'tag.Desktop Toy Innovation': '桌面玩具创新',
+  'tag.Children': '儿童',
+  'tag.Music': '音乐',
+  'tag.Creation': '创作',
+  'tag.Generative AI': '生成式 AI',
 };
